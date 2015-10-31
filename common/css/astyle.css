@@ -56,8 +56,8 @@ header{
 	font-size: 32px;
 	font-weight: 100;
 	text-align: center;
-	color: #222;
-	padding: 12px 0px;
+	color: #eee;
+	padding: 12px 0px 35px 0px;
 }
 
 .parParagraph {
@@ -94,4 +94,16 @@ header{
 	background-color: rgba(0, 0, 0, 0.6);
 	color: #fff;
 	text-align: center;
+}
+
+.list-2-col{
+	columns: 2;
+  	-webkit-columns: 2;
+  	-moz-columns: 2;
+  	list-style-type: none;
+}
+
+.white-line{
+	border-bottom: 1px solid #eee;
+	margin-bottom: 18px;
 }
