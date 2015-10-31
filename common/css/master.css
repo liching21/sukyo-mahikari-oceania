@@ -1,4 +1,5 @@
 @charset "utf-8";
+/** orignal desert red colour: #C97954*/
 
 body {
 	background-color: #fff;
@@ -9,22 +10,22 @@ body {
 }
 
 /* additional styles from original website */
-.parHeading1 { 
-	font-family: arial, helvetica, sans-serif; 
-	font-size: 18px; 
+.parHeading1 {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 18px;
 	font-style: normal;
-	font-weight: normal; 
+	font-weight: normal;
 	color: #C97954;
-	border-bottom: 1px; 
+	border-bottom: 1px;
 	border-bottom-color: #C97954;
 	margin-bottom: 24px;
 	}
 
-.parParagraph { 
-	font-family: arial, helvetica, sans-serif; 
-	font-size: 16px; 
-	font-weight: normal; 
-	font-style: normal; 
+.parParagraph {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
 	margin: 0 0 20px 0;
 }
 
@@ -39,10 +40,9 @@ header ul {
 	list-style-type: none;
 }
 
-.disclaimer { 
-	font-family: arial, helvetica, sans-serif; 
-	font-size: 12px; 
-	color: #9b9b9b;
+.disclaimer {
+	font-family: arial, helvetica, sans-serif;
+	line-height: 1.2;
 }
 /* end of additional styles */
 
@@ -51,13 +51,13 @@ a {
 	color: #515151;
 }
 	a:hover {
-		color: #C97954;
+		color: #eba03a;
 	}
 
 
 header {
-	border-top: 28px solid #C97954;
-	border-bottom: 1px solid  #C97954;
+	/**border-top: 28px solid #eea849;**/
+	border-bottom: 1px solid  #eea849;
 	padding: 0 0 5px 0;
 }
 
@@ -66,16 +66,21 @@ header {
 	width: 960px;
 	position: relative;
 }
+
 #countryLink {
-	position: absolute;
-	top: -20px;
 	left: 0;
 	line-height: 1;
+	margin-bottom: 24px;
 }
+
+#countryLink ul{
+	list-style-type: none;
+}
+
 #countryLink li {
-	float: left;
 	margin: 0;
-	border-right: 1px solid #fff;
+	display: inline-block;
+	/**border-right: 1px solid #fff;*/
 	padding: 0 10px
 }
 	#countryLink li a {
@@ -85,7 +90,7 @@ header {
 		font-size: 13px;
 	}
 		#countryLink li a:hover {
-			color: #51FFFF;
+			color: #222;
 		}
 #siteMap {
 	position: absolute;
@@ -102,17 +107,17 @@ header {
 		padding: 0 0 0 20px;
 	}
 		#siteMap a:hover {
-			 color: #51FFFF;
+			 color: #222;
 		}
-	
+/**
 #headLogo {
 	text-align: center;
 	background: url(../img/logo_jp.png) 10px 10px no-repeat;
 	padding: 20px 0 0 0;
-}
+}*/
 
 nav {
-	margin: 30px 0 0 0;
+	/**margin: 30px 0 0 0;*/
 }
 nav ul {
 	text-align: center;
@@ -125,7 +130,7 @@ nav ul {
 		nav ul li a {
 			display: block;
 		}
-		
+
 #contents {
 	width: 960px;
 	margin: 0 auto;
@@ -134,8 +139,13 @@ nav ul {
 
 footer {
 	margin: 50px 0 0 0;
+
+	/** original red
 	background-color: #C97954;
-	border-top: 25px solid #ECCFC2;
+	border-top: 25px solid #ECCFC2;*/
+
+	background-color: #eba03a;
+	border-top: 25px solid #fcf0b9;
 }
 
 #footerIn {
@@ -143,7 +153,7 @@ footer {
 	width: 960px;
 	margin: 0 auto;
 	text-align: center;
-	padding: 30px 0;
+	padding: 30px 0px 0px 0px;
 }
 .iconGohonzan {
 	position: absolute;

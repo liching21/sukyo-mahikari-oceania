@@ -6,21 +6,46 @@
  */
 
 body{
-	background-image: url("../../img/mural-square-v2.jpg");
-	font-family: 'Open Sans', sans-serif;
+	background-image: url("../../img/sunflower.jpg");*/
+	/**background: -webkit-linear-gradient(269deg, rgba(245,113,12,1) 0%, rgba(240,228,5,1) 100%); /* safari5.1+,chrome10+ */
+	background-size: cover;
+	color: #eee;
 }
 
 header{
 	background-color: #fff;
+	padding: 0px;
+}
+
+body,
+header{
+	font-family: 'Open Sans', sans-serif;
+}
+
+#nav-logo{
+	display: inline-block;
+    padding: 12px;
+}
+
+#nav-menu{
+	width: 70%;
+    float: right;
+    padding: 19px 12px 0px 12px;
+    font-size: 18px;
+    text-align: right;
 }
 
 #contents{
-	background-color: rgba(256, 256, 256, 0.6);
-	padding: 0px;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 24px;
+	margin-bottom: 80px;
 }
 
 .slideshow{
-	padding: 0px;
+	box-shadow: 0 0 5px #ccc;
+    border: 5px solid #fff;
+    border-bottom-width: 1px;
+    background: #fff;
 }
 
 .other-content{
@@ -29,11 +54,10 @@ header{
 
 .page-title{
 	font-size: 32px;
-	background-color: #C97954;
 	font-weight: 100;
 	text-align: center;
-	color: #fff;
-	padding: 12px 0px;
+	color: #eee;
+	padding: 12px 0px 35px 0px;
 }
 
 .parParagraph {
@@ -45,7 +69,7 @@ header{
 }
 
 .parParagraph a{
-	color: #C97954;
+	color: #eea849;
 }
 
 .parParagraph a:hover{
@@ -70,4 +94,16 @@ header{
 	background-color: rgba(0, 0, 0, 0.6);
 	color: #fff;
 	text-align: center;
+}
+
+.list-2-col{
+	columns: 2;
+  	-webkit-columns: 2;
+  	-moz-columns: 2;
+  	list-style-type: none;
+}
+
+.white-line{
+	border-bottom: 1px solid #eee;
+	margin-bottom: 18px;
 }
