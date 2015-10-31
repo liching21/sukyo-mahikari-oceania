@@ -6,7 +6,8 @@
  */
 
 body{
-	background-image: url("../../img/mural-square-v2.jpg");
+	/**background-image: url("../../img/mural-square-v2.jpg");*/
+	/**background: -webkit-linear-gradient(269deg, rgba(245,113,12,1) 0%, rgba(240,228,5,1) 100%); /* safari5.1+,chrome10+ */
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -16,11 +17,14 @@ header{
 
 #contents{
 	background-color: rgba(256, 256, 256, 0.6);
-	padding: 0px;
+	padding: 24px;
 }
 
 .slideshow{
-	padding: 0px;
+	box-shadow: 0 0 5px #ccc;
+    border: 5px solid #fff;
+    border-bottom-width: 1px;
+    background: #fff;
 }
 
 .other-content{
@@ -29,10 +33,9 @@ header{
 
 .page-title{
 	font-size: 32px;
-	background-color: #C97954;
 	font-weight: 100;
 	text-align: center;
-	color: #fff;
+	color: #222;
 	padding: 12px 0px;
 }
 
@@ -45,7 +48,7 @@ header{
 }
 
 .parParagraph a{
-	color: #C97954;
+	color: #eea849;
 }
 
 .parParagraph a:hover{
