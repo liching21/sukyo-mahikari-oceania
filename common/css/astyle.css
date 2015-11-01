@@ -24,15 +24,11 @@ header{
 
 #nav-logo{
 	display: inline-block;
-    padding: 12px;
 }
 
-#nav-menu{
-	width: 70%;
-    float: right;
-    padding: 19px 12px 0px 12px;
-    font-size: 18px;
-    text-align: right;
+#nav-logo a{
+	padding: 10px 10px 6px 12px;
+	display: block;
 }
 
 #contents{
