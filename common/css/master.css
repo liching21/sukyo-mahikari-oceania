@@ -135,6 +135,7 @@ header {
 	left: 0;
 	line-height: 1;
 	margin-bottom: 24px;
+	color: #fff;
 }
 
 #countryLink ul{
@@ -148,10 +149,10 @@ header {
 	padding: 0 10px
 }
 	#countryLink li a {
-		color: #fff;
 		display: block;
 		text-decoration: none;
 		font-size: 13px;
+		color: #fff;
 	}
 		#countryLink li a:hover {
 			color: #222;
