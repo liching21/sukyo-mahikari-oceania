@@ -40,7 +40,9 @@ body {
 }
 
 #nav-menu:after {
-		content: ""; clear: both; display: block;
+	content: "";
+	clear: both;
+	display: block;
 }
 
 #nav-menu li {
@@ -59,6 +61,7 @@ body {
 		padding: 16px 12px 17px 12px;
 		color: #757575;
 		text-decoration: none;
+		font-weight: 300;
 	}
 
 	#nav-menu li:hover > ul {
