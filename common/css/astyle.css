@@ -9,7 +9,7 @@ body{
 	background-image: url("../../img/sunflower.jpg");*/
 	/**background: -webkit-linear-gradient(269deg, rgba(245,113,12,1) 0%, rgba(240,228,5,1) 100%); /* safari5.1+,chrome10+ */
 	background-size: cover;
-	color: #222;
+	color: #666;
 }
 
 header{
@@ -31,8 +31,12 @@ header{
 	display: block;
 }
 
+.yellow-line{
+	border-bottom: 2px solid #fcf0b9;
+}
+
 #contents{
-	background-color: rgba(256, 256, 256, 0.93);
+	background-color: rgba(256, 256, 256, 0.83);
 	padding: 24px;
 	margin-bottom: 80px;
 }
@@ -52,8 +56,9 @@ header{
 	font-size: 32px;
 	font-weight: 100;
 	text-align: center;
-	color: #eee;
+	color: #666;
 	padding: 12px 0px 35px 0px;
+	border-bottom: 1px solid #666;
 }
 
 .parParagraph {
@@ -102,4 +107,8 @@ header{
 .white-line{
 	border-bottom: 1px solid #eee;
 	margin-bottom: 18px;
+}
+
+.text-center{
+	text-align: center;
 }
