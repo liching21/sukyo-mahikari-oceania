@@ -9,7 +9,7 @@ body{
 	background-image: url("../../img/sunflower.jpg");*/
 	/**background: -webkit-linear-gradient(269deg, rgba(245,113,12,1) 0%, rgba(240,228,5,1) 100%); /* safari5.1+,chrome10+ */
 	background-size: cover;
-	color: #eee;
+	color: #222;
 }
 
 header{
@@ -32,7 +32,7 @@ header{
 }
 
 #contents{
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(256, 256, 256, 0.93);
 	padding: 24px;
 	margin-bottom: 80px;
 }
