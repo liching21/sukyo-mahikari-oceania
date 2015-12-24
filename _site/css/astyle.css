@@ -86,6 +86,11 @@ header{
 	display: inline-block;
 }
 
+.twenty-five-percent{
+	width: 25%;
+	display: inline-block;
+}
+
 .image{
 	width: 100%;
 }
