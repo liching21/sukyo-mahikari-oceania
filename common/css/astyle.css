@@ -37,8 +37,7 @@ header{
 
 #contents{
 	background-color: rgba(256, 256, 256, 0.83);
-	padding: 24px;
-	margin-bottom: 80px;
+	padding: 24px 24px 120px 24px;
 }
 
 .slideshow{
@@ -104,8 +103,8 @@ header{
   	list-style-type: none;
 }
 
-.white-line{
-	border-bottom: 1px solid #eee;
+.black-line{
+	border-bottom: 1px solid #666;
 	margin-bottom: 18px;
 }
 
