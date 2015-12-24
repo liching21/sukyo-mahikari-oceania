@@ -76,6 +76,11 @@ header{
 	border-bottom: 1px solid #C97954;
 }
 
+.hundred-percent{
+	width: 100%;
+	display: inline-block;
+}
+
 .fifty-percent{
 	width: 50%;
 	display: inline-block;
