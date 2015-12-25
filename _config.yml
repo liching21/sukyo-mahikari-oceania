@@ -10,9 +10,7 @@ title: Sukyo Mahikari Australia Oceania
 email: your-email@domain.com
 description: Non-denominational spiritual organisation。
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://lichingyew.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
