@@ -8,14 +8,6 @@ body {
   color: #4a6e78;
 }
 
-h2 {
-  text-align: left;
-  font-size: 24px;
-  font-weight: 300;
-  color: #EEA849;
-  line-height: 1.8;
-}
-
 .accordion {
   max-width: 960px;
   margin: 0 auto 32px;
