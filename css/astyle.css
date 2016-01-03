@@ -83,11 +83,21 @@ h2 {
 }
 
 .parParagraph a:hover{
-	border-bottom: 1px solid #C97954;
+	border-bottom: 1px solid #eea849;
 }
 
 .hundred-percent{
 	width: 100%;
+	display: inline-block;
+}
+
+.seventy-five-percent{
+	width: 75%;
+	display: inline-block;
+}
+
+.sixty-six-percent{
+	width: 66.66%;
 	display: inline-block;
 }
 
@@ -106,14 +116,50 @@ h2 {
 	display: inline-block;
 }
 
+.content-image-right{
+	width: 100%;
+	border-radius: 12px;
+	margin-left: 12px;
+}
+
+.content-image-left{
+	width: 100%;
+	border-radius: 12px;
+}
+
+.content-right{
+	margin-left: 24px;
+}
+
 .image{
 	width: 100%;
+	border-radius: 8px;
+}
+
+.img-caption-right{
+	background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    margin-left: 12px;
+    width: 100%;
+}
+
+.img-caption-left{
+	background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    width: 100%;
 }
 
 .img-caption{
 	background-color: rgba(0, 0, 0, 0.6);
-	color: #fff;
-	text-align: center;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    margin-left: 12px;
+    width: 100%;
 }
 
 .list-2-col{
