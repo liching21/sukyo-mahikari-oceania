@@ -58,8 +58,8 @@ body {
 
 	#nav-menu li a {
 		display: block;
-		padding: 16px 12px 20px 12px;
-		color: #757575;
+		padding: 16px 12px 17px 12px;
+		color: #333;
 		text-decoration: none;
 		font-weight: 300;
 	}
@@ -124,7 +124,6 @@ a {
 
 header {
 	/**border-top: 28px solid #eea849;**/
-	border-bottom: 2px solid  #eea849;
 	border-top: 2px solid  #eea849;
 	padding: 0 0 5px 0;
 }
