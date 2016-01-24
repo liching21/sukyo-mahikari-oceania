@@ -10,44 +10,49 @@
   <meta name="description" content="Non-denominational spiritual organisation。">
   <meta name="keywords" content="Sukyo Mahikari">
 
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/master.css">
-  <link rel="stylesheet" href="../css/astyle.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/master.css">
+  <link rel="stylesheet" href="/css/astyle.css">
+  <link rel="stylesheet" href="/css/accordion.css">
   <link rel="canonical" href="http://lichingyew.com/pages/gallery.html">
   <link rel="alternate" type="application/rss+xml" title="Sukyo Mahikari Australia Oceania" href="http://lichingyew.com/feed.xml">
-  <link rel="shortcut icon" type="image/png" href="../img/favicon.ico"/>
+  <link rel="shortcut icon" type="image/png" href="/img/favicon.ico"/>
+
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
+
 
 
   <body>
 
     <header>
   <nav>
-    <div id="nav-logo"><a href="../index.html"><img src="../img/logo_goshinmon_en-bar.png"/></a></div>
+    <div id="nav-logo"><a href="/index.html"><img src="/img/logo_goshinmon_en-bar.png"/></a></div>
     <ul id="nav-menu">
-      <li><a href="ourVision.html">Our Vision</a>
+      <li><a data-ajax-link="/pages/ourVision.html" href="#">Our Vision</a>
         <ul class="dropdown-menu">
-          <li><a href="artSpiritualPurification.html">The Art of Spiritual Purification</a></li>
-          <li><a href="holyMasters.html">The Founder and Spiritual Leaders</a></li>
+          <li><a data-ajax-link="/pages/artSpiritualPurification.html" href="#">The Art of Spiritual Purification</a></li>
+          <li><a data-ajax-link="/pages/holyMasters.html" href="#">The Founder and Spiritual Leaders</a></li>
         </ul>
       </li>
-      <li><a href="yourInterest.html">What is Your Interest?</a>
+      <li><a data-ajax-link="/pages/yourInterest.html" href="#">What is Your Interest?</a>
         <ul class="dropdown-menu">
-          <li><a href="interests/whatIsSukyoMahikari.html">What is Sukyo Mahikari?</a></li>
-          <li><a href="interests/youth21stCentury.html">Youth in the 21st Century</a></li>
-          <li><a href="interests/healthWellbeing.html">Holistic Health and Well-being</a></li>
-          <li><a href="interests/relationshipsFamily.html">Relationships and Happy Families</a></li>
-          <li><a href="interests/financilEconomicProsperity.html">Financial and Economic Prosperity</a></li>
-          <li><a href="interests/sustainableEnvironmentAgriculture.html">Sustainable Environment and Agriculture</a></li>
-          <li><a href="interests/religousHarmony.html">Religious Harmony</a></li>
-          <li><a href="interests/workStudiesDailyLife.html">Fulfilment in Work, Studies and Daily Life</a></li>
-          <li><a href="interests/personalSpirituality.html">Personal Spirituality</a></li>
-          <li><a href="yourInterest.html#furtherReading">Further Reading – literature and websites</a></li>
+          <li><a data-ajax-link="/pages/interests/whatIsSukyoMahikari.html" href="#">What is Sukyo Mahikari?</a></li>
+          <li><a data-ajax-link="/pages/interests/youth21stCentury.html" href="#">Youth in the 21st Century</a></li>
+          <li><a data-ajax-link="/pages/interests/healthWellbeing.html" href="#">Holistic Health and Well-being</a></li>
+          <li><a data-ajax-link="/pages/interests/relationshipsFamily.html" href="#">Relationships and Happy Families</a></li>
+          <li><a data-ajax-link="/pages/interests/financilEconomicProsperity.html" href="#">Financial and Economic Prosperity</a></li>
+          <li><a data-ajax-link="/pages/interests/sustainableEnvironmentAgriculture.html" href="#">Sustainable Environment and Agriculture</a></li>
+          <li><a data-ajax-link="/pages/interests/religousHarmony.html" href="#">Religious Harmony</a></li>
+          <li><a data-ajax-link="/pages/interests/workStudiesDailyLife.html" href="#">Fulfilment in Work, Studies and Daily Life</a></li>
+          <li><a data-ajax-link="/pages/interests/personalSpirituality.html" href="#">Personal Spirituality</a></li>
+          <li><a data-ajax-link="/pages/yourInterest.html#furtherReading" href="#">Further Reading – literature and websites</a></li>
         </ul>
       </li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="questionsAnswers.html">Q&A</a></li>
-      <li><a href="contactUs.html">Contact Us</a></li>
+      <li><a data-ajax-link="/pages/gallery.html" href="#">Gallery</a></li>
+      <li><a data-ajax-link="/pages/questionsAnswers.html" href="#">Q&A</a></li>
+      <li><a data-ajax-link="/pages/contactUs.html" href="#">Contact Us</a></li>
     </ul>
   </nav>
   <div class="yellow-line"></div>
@@ -130,14 +135,43 @@
 
     <footer>
   <div id="footerIn">
-    <img class="iconGohonzan" src="../img/icon_gohonzan-orange.png" width="92" height="70" alt=""/>
-    <img src="../img/logo_jp_white.png" width="136" height="52" alt=""/>
+    <img class="iconGohonzan" src="/img/icon_gohonzan-orange.png" width="92" height="70" alt=""/>
+    <img src="/img/logo_jp_white.png" width="136" height="52" alt=""/>
     <div id="address">
       <address>Sukyo Mahikari Australia Oceania<br>3 Mulley Street<br>Holder ACT 2611<br>Australia</address>
     </div>
     <p><small>Copyright &copy; Sukyo Mahikari. All rights reserved.</small></p>
   </div>
 </footer>
+
+<!-- Script for AJAX -->
+<script>
+	$(document).ready(function() {
+
+		//when a navbar menu item is clicked
+		$("#nav-menu a").click(function() {
+			// get the page that we want
+			var loadPage = $(this).attr("data-ajax-link");
+
+			// load health page
+			$.ajax({
+			  method: "GET",
+			  url: loadPage,
+			  dataType: "text"
+			})
+			.done(function( data ) {
+
+				$('#contents').fadeOut(function() {
+					$("#contents").html($(data).filter('#contents').html());
+					$('#contents').fadeIn();
+					history.pushState(null, "", loadPage);
+				});
+			});
+
+			return false;
+		});
+	});
+</script>
 
 
   </body>
