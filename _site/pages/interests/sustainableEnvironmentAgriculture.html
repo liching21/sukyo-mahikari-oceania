@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <base href="http://lichingyew.com/sukyo-mahikari-oceania/">
-  <!--  <base href="http://127.0.0.1:4000/"> -->
+  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/"> -->
+  <base href="http://127.0.0.1:4000/">
 
   <title>Sukyo Mahikari Australia Oceania</title>
   <meta name="description" content="Non-denominational spiritual organisation。">
@@ -71,7 +71,7 @@
 
 				<p class="parParagraph">The quality of human life and the life of all creatures in the realm of nature depends on the health of the environment.</p>
 
-				<p class="parParagraph">The art of spiritual purification with the <a href="pages/artSpiritualPurification.html">Light of God</a>, can help to detoxify the environment, the food we eat, and our physical bodies. Our heart, liver, kidneys and so on, are being overloaded with poisonous substances and <a href="pages/artSpiritualPurification.html">God’s Light</a> helps to dissolve and discharge those impurities.</p>
+				<p class="parParagraph">The art of spiritual purification with the <a data-ajax-link="pages/artSpiritualPurification.html">Light of God</a>, can help to detoxify the environment, the food we eat, and our physical bodies. Our heart, liver, kidneys and so on, are being overloaded with poisonous substances and <a data-ajax-link="pages/artSpiritualPurification.html">God’s Light</a> helps to dissolve and discharge those impurities.</p>
 
 				<p class="parParagraph">Regarding agriculture, the balance of nature is being seriously affected by the use of pesticides, chemical fertilisers, and such things as genetically modified animal and plant species. However, a spiritual approach to agriculture is more than simply not using chemicals.</p>
 			</div><div class="thirty-three-percent">
@@ -90,7 +90,7 @@
 				<div class="content-right">
 					<p class="parParagraph">We take an approach that is organic and which works to promote biological diversity through the use of biological compost.</p>
 
-					<p class="parParagraph">However, the most powerful feature of a spiritual approach to agriculture focuses on the <a href="pages/artSpiritualPurification.html">Light of God</a> to purify the equipment, the plants, the soil and everything in nature.</p>
+					<p class="parParagraph">However, the most powerful feature of a spiritual approach to agriculture focuses on the <a data-ajax-link="pages/artSpiritualPurification.html">Light of God</a> to purify the equipment, the plants, the soil and everything in nature.</p>
 
 					<p class="parParagraph">The way we maintain our attitudes and use words in relation to nature, gardens and farms is also very influential. Positive attitudes and positive communication with nature seem to promote a healthier interaction and results. Negative attitudes and words have negative effects on plants and produce.</p>
 				</div>
@@ -122,10 +122,41 @@
 <script>
 	$(document).ready(function() {
 
+		function setLinks() {
+			$(".other-content a").click(function() {
+				// get the page that we want
+				var loadPage = $(this).attr("data-ajax-link");
+
+				console.log("loading: " + loadPage);
+
+				// load health page
+				$.ajax({
+				  method: "GET",
+				  url: loadPage,
+				  dataType: "text"
+				})
+				.done(function( data ) {
+
+					$('#contents').fadeOut(function() {
+						$("#contents").html($(data).filter('#contents').html());
+						$('#contents').fadeIn();
+
+						setLinks();
+
+						history.pushState(null, "", loadPage);
+					});
+				});
+
+				return false;
+			});
+		}
+
 		//when a navbar menu item is clicked
-		$("#nav-menu a").click(function() {
+		$("#nav-menu a, .other-content a").click(function() {
 			// get the page that we want
 			var loadPage = $(this).attr("data-ajax-link");
+
+			console.log("loading: " + loadPage);
 
 			// load health page
 			$.ajax({
@@ -138,6 +169,9 @@
 				$('#contents').fadeOut(function() {
 					$("#contents").html($(data).filter('#contents').html());
 					$('#contents').fadeIn();
+
+					setLinks();
+
 					history.pushState(null, "", loadPage);
 				});
 			});

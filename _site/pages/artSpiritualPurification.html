@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <base href="http://lichingyew.com/sukyo-mahikari-oceania/">
-  <!--  <base href="http://127.0.0.1:4000/"> -->
+  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/"> -->
+  <base href="http://127.0.0.1:4000/">
 
   <title>Sukyo Mahikari Australia Oceania</title>
   <meta name="description" content="Non-denominational spiritual organisation。">
@@ -76,7 +76,7 @@
 
 				<p class="parParagraph">God’s Light is the spiritual energy or vibration of God’s wisdom, love and will. It exists throughout the universe and is the fundamental power that creates and sustains life.</p>
 
-				<p class="parParagraph">In <a href="interests/whatIsSukyoMahikari.html">Sukyo Mahikari</a>, we practise the art of spiritual purification (in Japanese - Mahikari no waza), radiating the Light of God from the palm of the hand.</p>
+				<p class="parParagraph">In <a data-ajax-link="pages/interests/whatIsSukyoMahikari.html">Sukyo Mahikari</a>, we practise the art of spiritual purification (in Japanese - Mahikari no waza), radiating the Light of God from the palm of the hand.</p>
 			</div><div class="thirty-three-percent">
 				<img <img class="content-image-right" src="img/images/trueLight/Art-of-TL-01.jpg" alt="the art of spiritual purification"/>
 			</div>
@@ -111,10 +111,41 @@
 <script>
 	$(document).ready(function() {
 
+		function setLinks() {
+			$(".other-content a").click(function() {
+				// get the page that we want
+				var loadPage = $(this).attr("data-ajax-link");
+
+				console.log("loading: " + loadPage);
+
+				// load health page
+				$.ajax({
+				  method: "GET",
+				  url: loadPage,
+				  dataType: "text"
+				})
+				.done(function( data ) {
+
+					$('#contents').fadeOut(function() {
+						$("#contents").html($(data).filter('#contents').html());
+						$('#contents').fadeIn();
+
+						setLinks();
+
+						history.pushState(null, "", loadPage);
+					});
+				});
+
+				return false;
+			});
+		}
+
 		//when a navbar menu item is clicked
-		$("#nav-menu a").click(function() {
+		$("#nav-menu a, .other-content a").click(function() {
 			// get the page that we want
 			var loadPage = $(this).attr("data-ajax-link");
+
+			console.log("loading: " + loadPage);
 
 			// load health page
 			$.ajax({
@@ -127,6 +158,9 @@
 				$('#contents').fadeOut(function() {
 					$("#contents").html($(data).filter('#contents').html());
 					$('#contents').fadeIn();
+
+					setLinks();
+
 					history.pushState(null, "", loadPage);
 				});
 			});

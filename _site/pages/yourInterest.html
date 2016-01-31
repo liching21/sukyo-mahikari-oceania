@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <base href="http://lichingyew.com/sukyo-mahikari-oceania/">
-  <!--  <base href="http://127.0.0.1:4000/"> -->
+  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/"> -->
+  <base href="http://127.0.0.1:4000/">
 
   <title>Sukyo Mahikari Australia Oceania</title>
   <meta name="description" content="Non-denominational spiritual organisation。">
@@ -67,7 +67,7 @@
 	<div class="other-content">
 
 		<div class="interest-row">
-			<a href="pages/interests/whatIsSukyoMahikari.html">
+			<a data-ajax-link="pages/interests/whatIsSukyoMahikari.html">
 				<div class="twenty-five-percent">
 					<img class="interest-image" src="img/images/mahikariActivities/SydneyPC.jpg" alt="sukyo mahikari course"/></div><div class="seventy-five-percent">
 					<div class="interest-content">
@@ -84,7 +84,7 @@
 		</div> <!-- What is your interest? -->
 
 		<div class="interest-row">
-			<a href="pages/interests/youth21stCentury.html">
+			<a data-ajax-link="pages/interests/youth21stCentury.html">
 				<div class="twenty-five-percent">
 					<img class="interest-image" src="img/images/mahikariActivities/Youth-studyClass.jpg" alt="youth study class"/></div><div class="seventy-five-percent">
 					<div class="interest-content">
@@ -97,7 +97,7 @@
 		</div> <!-- Youth in the 21st Century -->
 
 		<div class="interest-row">
-			<a href="pages/interests/healthWellbeing.html">
+			<a data-ajax-link="pages/interests/healthWellbeing.html">
 				<div class="twenty-five-percent">
 					<img class="interest-image" src="img/images/layout/exercise.jpg" alt="health and well being"/></div><div class="seventy-five-percent">
 					<div class="interest-content">
@@ -110,7 +110,7 @@
 		</div> <!-- Holistic Health and Well-being -->
 
 		<div class="interest-row">
-			<a href="pages/interests/sustainableEnvironmentAgriculture.html">
+			<a data-ajax-link="pages/interests/sustainableEnvironmentAgriculture.html">
 				<div class="twenty-five-percent">
 					<img class="interest-image" src="img/images/mahikariActivities/Yoko-Farm-04.jpg" alt="environment &amp; agriculture"/></div><div class="seventy-five-percent">
 					<div class="interest-content">
@@ -123,7 +123,7 @@
 		</div> <!-- Sustainable Environment and Agriculture -->
 
 		<div class="interest-row">
-			<a href="pages/interests/religousHarmony.html">
+			<a data-ajax-link="pages/interests/religousHarmony.html">
 				<div class="twenty-five-percent">
 					<img class="interest-image" src="img/images/layout/Christianity.jpg" alt="Christianity"/></div><div class="seventy-five-percent">
 					<div class="interest-content">
@@ -136,7 +136,7 @@
 		</div> <!-- Religious Harmony -->
 
 		<div class="interest-row">
-			<a href="pages/interests/workStudiesDailyLife.html">
+			<a data-ajax-link="pages/interests/workStudiesDailyLife.html">
 				<div class="twenty-five-percent">
 					<img class="interest-image" src="img/images/layout/office.jpg" alt="work, studies &amp; daily life"/></div><div class="seventy-five-percent">
 					<div class="interest-content">
@@ -149,7 +149,7 @@
 		</div> <!-- Fulfilment in Work, Studies and Daily Life -->
 
 		<div class="interest-row">
-			<a href="pages/interests/relationshipsFamily.html">
+			<a data-ajax-link="pages/interests/relationshipsFamily.html">
 				<div class="twenty-five-percent">
 					<img class="interest-image" src="img/images/layout/happyFamily.jpg" alt="Relationships and Happy Families"/></div><div class="seventy-five-percent">
 					<div class="interest-content">
@@ -162,7 +162,7 @@
 		</div> <!-- Relationships and Happy Families -->
 
 		<div class="interest-row">
-			<a href="pages/interests/financilEconomicProsperity.html">
+			<a data-ajax-link="pages/interests/financilEconomicProsperity.html">
 				<div class="twenty-five-percent">
 					<img class="interest-image" src="img/images/layout/cityScape02.jpg" alt="finance and economics"/></div><div class="seventy-five-percent">
 					<div class="interest-content">
@@ -175,7 +175,7 @@
 		</div> <!-- Financial and Economic Prosperity -->
 
 		<div class="interest-row">
-			<a href="pages/interests/personalSpirituality.html">
+			<a data-ajax-link="pages/interests/personalSpirituality.html">
 				<div class="twenty-five-percent">
 					<img class="interest-image" src="img/images/layout/praying.jpg" alt="Personal Spirituality"/></div><div class="seventy-five-percent">
 					<div class="interest-content">
@@ -187,7 +187,7 @@
 			</a>
 		</div> <!-- Personal Spirituality -->
 
-		<a href="pages/interests/furtherReading.html"><div class="further-info">Further Reading and Websites</div></a>
+		<a data-ajax-link="pages/interests/furtherReading.html"><div class="further-info">Further Reading and Websites</div></a>
 	</div>
 
 	<!-- extra images
@@ -229,10 +229,41 @@
 <script>
 	$(document).ready(function() {
 
+		function setLinks() {
+			$(".other-content a").click(function() {
+				// get the page that we want
+				var loadPage = $(this).attr("data-ajax-link");
+
+				console.log("loading: " + loadPage);
+
+				// load health page
+				$.ajax({
+				  method: "GET",
+				  url: loadPage,
+				  dataType: "text"
+				})
+				.done(function( data ) {
+
+					$('#contents').fadeOut(function() {
+						$("#contents").html($(data).filter('#contents').html());
+						$('#contents').fadeIn();
+
+						setLinks();
+
+						history.pushState(null, "", loadPage);
+					});
+				});
+
+				return false;
+			});
+		}
+
 		//when a navbar menu item is clicked
-		$("#nav-menu a").click(function() {
+		$("#nav-menu a, .other-content a").click(function() {
 			// get the page that we want
 			var loadPage = $(this).attr("data-ajax-link");
+
+			console.log("loading: " + loadPage);
 
 			// load health page
 			$.ajax({
@@ -245,6 +276,9 @@
 				$('#contents').fadeOut(function() {
 					$("#contents").html($(data).filter('#contents').html());
 					$('#contents').fadeIn();
+
+					setLinks();
+
 					history.pushState(null, "", loadPage);
 				});
 			});

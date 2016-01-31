@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <base href="http://lichingyew.com/sukyo-mahikari-oceania/">
-  <!--  <base href="http://127.0.0.1:4000/"> -->
+  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/"> -->
+  <base href="http://127.0.0.1:4000/">
 
   <title>Sukyo Mahikari Australia Oceania</title>
   <meta name="description" content="Non-denominational spiritual organisation。">
@@ -71,7 +71,7 @@
 	<div class="row">
 		<div class="sixty-six-percent">
 
-			<p class="parParagraph">The art of spiritual purification with the <a href="pages/artSpiritualPurification.html">Light of God</a> allows purification of the spirit, mind and body simultaneously.</p>
+			<p class="parParagraph">The art of spiritual purification with the <a data-ajax-link="pages/artSpiritualPurification.html">Light of God</a> allows purification of the spirit, mind and body simultaneously.</p>
 
 			<p class="parParagraph">In this way one can address the cause of problems, whatever their origin.</p>
 
@@ -86,7 +86,7 @@
 		</div>
 	</div>
 
-		<p class="parParagraph">This practice is not aimed at healing or curing but, through purifying with <a href="pages/artSpiritualPurification.html">God’s Light</a>, all kinds of improvements take place in various aspects of life - such as our health, <a href="pages/interests/relationshipsFamily.html">relationships</a> and even <a href="pages/interests/financilEconomicProsperity.html">economic and material circumstances.</a></p>
+		<p class="parParagraph">This practice is not aimed at healing or curing but, through purifying with <a data-ajax-link="pages/artSpiritualPurification.html">God’s Light</a>, all kinds of improvements take place in various aspects of life - such as our health, <a data-ajax-link="pages/interests/relationshipsFamily.html">relationships</a> and even <a data-ajax-link="pages/interests/financilEconomicProsperity.html">economic and material circumstances.</a></p>
 
 		<div class="row">
 			<div class="thirty-three-percent">
@@ -95,7 +95,7 @@
 				<div class="content-right">
 					<p class="parParagraph">Ultimately, the timing and degree of these improvements will vary from person to person.</p>
 
-					<p class="parParagraph">The effectiveness of purification can depend on the frequency of contact with the <a href="pages/artSpiritualPurification.html">Light of God</a>, as well as our ability to live our lives in accordance with universal principles.</p>
+					<p class="parParagraph">The effectiveness of purification can depend on the frequency of contact with the <a data-ajax-link="pages/artSpiritualPurification.html">Light of God</a>, as well as our ability to live our lives in accordance with universal principles.</p>
 
 					<p class="parParagraph">We find that the most powerful and effective approach for changing our own situation in life is to make efforts in wanting to help others.</p>
 
@@ -122,10 +122,41 @@
 <script>
 	$(document).ready(function() {
 
+		function setLinks() {
+			$(".other-content a").click(function() {
+				// get the page that we want
+				var loadPage = $(this).attr("data-ajax-link");
+
+				console.log("loading: " + loadPage);
+
+				// load health page
+				$.ajax({
+				  method: "GET",
+				  url: loadPage,
+				  dataType: "text"
+				})
+				.done(function( data ) {
+
+					$('#contents').fadeOut(function() {
+						$("#contents").html($(data).filter('#contents').html());
+						$('#contents').fadeIn();
+
+						setLinks();
+
+						history.pushState(null, "", loadPage);
+					});
+				});
+
+				return false;
+			});
+		}
+
 		//when a navbar menu item is clicked
-		$("#nav-menu a").click(function() {
+		$("#nav-menu a, .other-content a").click(function() {
 			// get the page that we want
 			var loadPage = $(this).attr("data-ajax-link");
+
+			console.log("loading: " + loadPage);
 
 			// load health page
 			$.ajax({
@@ -138,6 +169,9 @@
 				$('#contents').fadeOut(function() {
 					$("#contents").html($(data).filter('#contents').html());
 					$('#contents').fadeIn();
+
+					setLinks();
+
 					history.pushState(null, "", loadPage);
 				});
 			});

@@ -116,6 +116,7 @@ header ul {
 a {
 	text-decoration: none;
 	color: #515151;
+	cursor: pointer;
 }
 	a:hover {
 		color: #eba03a;
