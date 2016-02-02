@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <base href="http://lichingyew.com/sukyo-mahikari-oceania/">
-  <!--  <base href="http://127.0.0.1:4000/"> -->
+  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/"> -->
+  <base href="http://127.0.0.1:4000/">
 
   <title>Sukyo Mahikari Australia Oceania</title>
   <meta name="description" content="Non-denominational spiritual organisation。">
@@ -69,7 +69,7 @@
 	<div class="other-content">
 
 		<div class="row">
-			<p class="parParagraph">When <a href="pages/holyMasters.html">Mr. Kotama Okada</a> founded the Mahikari organisation, his intention was to help people throughout the world to create a more peaceful and harmonious civilisation, based on the tenet that:</p>
+			<p class="parParagraph">When <a data-ajax-link="pages/holyMasters.html">Mr. Kotama Okada</a> founded the Mahikari organisation, his intention was to help people throughout the world to create a more peaceful and harmonious civilisation, based on the tenet that:</p>
 
 			<p class="parParagraph">“The origin of the world is one, the origin of all human beings is one, and the origin of all religions is one.”</p>
 		</div>
@@ -94,8 +94,8 @@
 		<p class="parParagraph">Further links:</p>
 
 		<ul>
-			<li class="parParagraph"><a href="pages/artSpiritualPurification.html">the art of spiritual purification</a></li>
-			<li class="parParagraph"><a href="pages/holyMasters.html">the founder and spiritual leaders</a></li>
+			<li class="parParagraph"><a data-ajax-link="pages/artSpiritualPurification.html">the art of spiritual purification</a></li>
+			<li class="parParagraph"><a data-ajax-link="pages/holyMasters.html">the founder and spiritual leaders</a></li>
 		</ul>
 	</div>
 
@@ -117,10 +117,41 @@
 <script>
 	$(document).ready(function() {
 
+		function setLinks() {
+			$(".other-content a").click(function() {
+				// get the page that we want
+				var loadPage = $(this).attr("data-ajax-link");
+
+				console.log("loading: " + loadPage);
+
+				// load health page
+				$.ajax({
+				  method: "GET",
+				  url: loadPage,
+				  dataType: "text"
+				})
+				.done(function( data ) {
+
+					$('#contents').fadeOut(function() {
+						$("#contents").html($(data).filter('#contents').html());
+						$('#contents').fadeIn();
+
+						setLinks();
+
+						history.pushState(null, "", loadPage);
+					});
+				});
+
+				return false;
+			});
+		}
+
 		//when a navbar menu item is clicked
-		$("#nav-menu a").click(function() {
+		$("#nav-menu a, .other-content a").click(function() {
 			// get the page that we want
 			var loadPage = $(this).attr("data-ajax-link");
+
+			console.log("loading: " + loadPage);
 
 			// load health page
 			$.ajax({
@@ -133,6 +164,9 @@
 				$('#contents').fadeOut(function() {
 					$("#contents").html($(data).filter('#contents').html());
 					$('#contents').fadeIn();
+
+					setLinks();
+
 					history.pushState(null, "", loadPage);
 				});
 			});

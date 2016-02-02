@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <base href="http://lichingyew.com/sukyo-mahikari-oceania/">
-  <!--  <base href="http://127.0.0.1:4000/"> -->
+  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/"> -->
+  <base href="http://127.0.0.1:4000/">
 
   <title>Sukyo Mahikari Australia Oceania</title>
   <meta name="description" content="Non-denominational spiritual organisation。">
@@ -71,7 +71,7 @@
 
 				<p class="parParagraph">How can we lead more fulfilling, meaningful and happy lives?</p>
 
-				<p class="parParagraph">There are often spiritual causes and influences that contribute to problems in our careers, businesses, workplaces and educational endeavours. Purification with the <a href="pages/artSpiritualPurification.html">Light of God</a> can help to identify these spiritual causes and allow us to take steps towards resolving these matters.</p>
+				<p class="parParagraph">There are often spiritual causes and influences that contribute to problems in our careers, businesses, workplaces and educational endeavours. Purification with the <a data-ajax-link="pages/artSpiritualPurification.html">Light of God</a> can help to identify these spiritual causes and allow us to take steps towards resolving these matters.</p>
 
 				<p class="parParagraph">The founder of Sukyo Mahikari taught that we are living in an age of fundamental change in the direction of our civilisation.</p>
 			</div><div class="thirty-three-percent">
@@ -114,10 +114,41 @@
 <script>
 	$(document).ready(function() {
 
+		function setLinks() {
+			$(".other-content a").click(function() {
+				// get the page that we want
+				var loadPage = $(this).attr("data-ajax-link");
+
+				console.log("loading: " + loadPage);
+
+				// load health page
+				$.ajax({
+				  method: "GET",
+				  url: loadPage,
+				  dataType: "text"
+				})
+				.done(function( data ) {
+
+					$('#contents').fadeOut(function() {
+						$("#contents").html($(data).filter('#contents').html());
+						$('#contents').fadeIn();
+
+						setLinks();
+
+						history.pushState(null, "", loadPage);
+					});
+				});
+
+				return false;
+			});
+		}
+
 		//when a navbar menu item is clicked
-		$("#nav-menu a").click(function() {
+		$("#nav-menu a, .other-content a").click(function() {
 			// get the page that we want
 			var loadPage = $(this).attr("data-ajax-link");
+
+			console.log("loading: " + loadPage);
 
 			// load health page
 			$.ajax({
@@ -130,6 +161,9 @@
 				$('#contents').fadeOut(function() {
 					$("#contents").html($(data).filter('#contents').html());
 					$('#contents').fadeIn();
+
+					setLinks();
+
 					history.pushState(null, "", loadPage);
 				});
 			});

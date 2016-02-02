@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <base href="http://lichingyew.com/sukyo-mahikari-oceania/">
-  <!--  <base href="http://127.0.0.1:4000/"> -->
+  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/"> -->
+  <base href="http://127.0.0.1:4000/">
 
   <title>Sukyo Mahikari Australia Oceania</title>
   <meta name="description" content="Non-denominational spiritual organisation。">
@@ -68,7 +68,7 @@
 
 		<div class="row">
 			<div class="sixty-six-percent">
-				<p class="parParagraph"><a href="pages/holyMasters.html">The founder</a> of Sukyo Mahikari taught that ultimately, an individual’s spiritual condition and growth is a personal matter. In other words, it is about our relationship with God and others, how we live our lives, how our attitudes are maintained, how we behave, and how we contribute in our life.</p>
+				<p class="parParagraph"><a data-ajax-link="pages/holyMasters.html">The founder</a> of Sukyo Mahikari taught that ultimately, an individual’s spiritual condition and growth is a personal matter. In other words, it is about our relationship with God and others, how we live our lives, how our attitudes are maintained, how we behave, and how we contribute in our life.</p>
 
 				<p class="parParagraph">Furthermore, our spiritual training in one lifetime is significantly influenced by our experiences from previous lifetimes. Reincarnation is a reality of our human existence, not simply a philosophical idea.</p>
 
@@ -76,7 +76,7 @@
 
 				<p class="parParagraph">We are each responsible for our own situation, and it is up to us, how we respond to those circumstances.</p>
 
-				<p class="parParagraph"><a href="pages/holyMasters.html">The founder </a>taught that the freedom to choose is the one freedom that God has given to human beings.</p>
+				<p class="parParagraph"><a data-ajax-link="pages/holyMasters.html">The founder </a>taught that the freedom to choose is the one freedom that God has given to human beings.</p>
 
 				<p class="parParagraph">Spiritual purification through giving and receiving the <a href="pages/artSpiritualPurification.html">Light of God</a> results in all kinds of spiritual experiences. One of the beautiful things about this is that such experiences do not depend on a person's belief or faith in God.</p>
 
@@ -94,7 +94,7 @@
 					<p class="parParagraph">Our spiritual experiences with the Light of God testify to:</p>
 
 					<ul>
-						<li type="circle" class="parParagraph">the existence of God and <a href="pages/artSpiritualPurification.html">God’s Light</a></li>
+						<li type="circle" class="parParagraph">the existence of God and <a data-ajax-link="pages/artSpiritualPurification.html">God’s Light</a></li>
 						<li type="circle" class="parParagraph">the existence of a spirit realm</li>
 						<li type="circle" class="parParagraph">the reality of reincarnation</li>
 					</ul>
@@ -124,10 +124,41 @@
 <script>
 	$(document).ready(function() {
 
+		function setLinks() {
+			$(".other-content a").click(function() {
+				// get the page that we want
+				var loadPage = $(this).attr("data-ajax-link");
+
+				console.log("loading: " + loadPage);
+
+				// load health page
+				$.ajax({
+				  method: "GET",
+				  url: loadPage,
+				  dataType: "text"
+				})
+				.done(function( data ) {
+
+					$('#contents').fadeOut(function() {
+						$("#contents").html($(data).filter('#contents').html());
+						$('#contents').fadeIn();
+
+						setLinks();
+
+						history.pushState(null, "", loadPage);
+					});
+				});
+
+				return false;
+			});
+		}
+
 		//when a navbar menu item is clicked
-		$("#nav-menu a").click(function() {
+		$("#nav-menu a, .other-content a").click(function() {
 			// get the page that we want
 			var loadPage = $(this).attr("data-ajax-link");
+
+			console.log("loading: " + loadPage);
 
 			// load health page
 			$.ajax({
@@ -140,6 +171,9 @@
 				$('#contents').fadeOut(function() {
 					$("#contents").html($(data).filter('#contents').html());
 					$('#contents').fadeIn();
+
+					setLinks();
+
 					history.pushState(null, "", loadPage);
 				});
 			});
