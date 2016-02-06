@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <base href="http://lichingyew.com/sukyo-mahikari-oceania/">
-  <!-- <base href="http://127.0.0.1:4000/"> -->
+  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/"> -->
+  <base href="http://127.0.0.1:4000/">
 
   <title>Sukyo Mahikari Australia Oceania</title>
   <meta name="description" content="Non-denominational spiritual organisation。">
@@ -112,12 +112,14 @@
 <script>
 	$(document).ready(function() {
 
+		// When a linked is clicked in the content
 		function setLinks() {
+
 			$(".other-content a").click(function() {
 				// get the page that we want
 				var loadPage = $(this).attr("data-ajax-link");
 
-				console.log("loading: " + loadPage);
+				console.log("loading in other content: " + loadPage);
 
 				// load health page
 				$.ajax({
@@ -139,16 +141,18 @@
 
 				return false;
 			});
+
 		}
+
 
 		//when a navbar menu item is clicked
 		$("#nav-menu a, .other-content a").click(function() {
 			// get the page that we want
 			var loadPage = $(this).attr("data-ajax-link");
 
-			console.log("loading: " + loadPage);
+			console.log("loading in nav menu: " + loadPage);
 
-			// load health page
+			// load page
 			$.ajax({
 			  method: "GET",
 			  url: loadPage,
@@ -168,6 +172,24 @@
 
 			return false;
 		});
+
+		function setLastLink(lastPage){
+
+			console.log("here here!");
+
+			var loadPage = lastPage;
+
+			history.pushState(null, "", loadPage);
+
+			console.log("did we get here?");
+
+		}
+
+		window.addEventListener("popstate", function(e) {
+    		console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+    		//setLastLink(document.location);
+    		window.location.href = document.location;
+    	});
 	});
 </script>
 
