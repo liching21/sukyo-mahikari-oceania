@@ -29,13 +29,13 @@ body {
 	margin: 0 0 20px 0;
 }
 
+#nav-bar{
+	text-align: center;
+}
+
 #nav-menu{
-	width: 70%;
-    float: right;
-    font-size: 18px;
-    text-align: right;
-    list-style: none;
-	position: relative;
+
+    font-size: 16px;
 	display: inline-table;
 }
 
@@ -58,7 +58,7 @@ body {
 
 	#nav-menu li a {
 		display: block;
-		padding: 16px 12px 17px 12px;
+		padding: 12px;
 		color: #333;
 		text-decoration: none;
 		font-weight: 300;
@@ -164,8 +164,8 @@ footer {
 	background-color: #C97954;
 	border-top: 25px solid #ECCFC2;*/
 
-	background-color: #eba03a;
-	border-top: 25px solid #fcf0b9;
+	background-color: #C97954;
+    border-top: 25px solid #ECCFC2;
 }
 
 #footerIn {

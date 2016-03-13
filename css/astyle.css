@@ -17,8 +17,12 @@ body{
 }
 
 header{
-	background-color: #eea849;
+	background-color: #fff;
 	padding: 0px;
+}
+
+#headLogo{
+	text-align: center;
 }
 
 body,
@@ -33,15 +37,6 @@ h2 {
   padding: 24px 0px 12px 0px;
   color: #EEA849;
   line-height: 1.8;
-}
-
-#nav-logo{
-	display: inline-block;
-}
-
-#nav-logo a{
-	padding: 10px 10px 6px 12px;
-	display: block;
 }
 
 .yellow-line{
