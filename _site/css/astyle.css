@@ -21,10 +21,6 @@ header{
 	padding: 0px;
 }
 
-#headLogo{
-	text-align: center;
-}
-
 body,
 header{
 	font-family: 'Open Sans', sans-serif;
@@ -41,6 +37,10 @@ h2 {
 
 .yellow-line{
 	border-bottom: 2px solid #fcf0b9;
+}
+
+.light-red-line{
+	border-bottom: 2px solid #ECCFC2;
 }
 
 #contents{

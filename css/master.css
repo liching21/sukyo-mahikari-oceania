@@ -134,12 +134,15 @@ header {
 	position: relative;
 }
 
-/**
 #headLogo {
 	text-align: center;
-	background: url(../img/logo_jp.png) 10px 10px no-repeat;
+	background: url(../../img/logo_jp.png) 10px 10px no-repeat;
 	padding: 20px 0 0 0;
-}*/
+}
+
+#headLogo img{
+	padding-bottom: 12px;
+}
 
 nav ul {
 	text-align: center;
