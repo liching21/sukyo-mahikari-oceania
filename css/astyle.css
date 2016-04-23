@@ -57,6 +57,34 @@ h2 {
 	bottom: 6px;
 }
 
+.index-content{
+
+}
+
+.index-menu-box{
+	vertical-align: text-bottom;
+}
+
+.menu-item{
+	width: 120px;
+	height: 120px;
+	border: 2px solid #EEA849;
+	border-radius: 12px;
+	margin: 6px;
+	display: inline-block;
+	background-color: #fff;
+
+}
+
+.menu-item span{
+	width: 120px;
+	height: 120px;
+	vertical-align: middle;
+	display: table-cell;
+	text-align: center;
+
+}
+
 .yellow-line{
 	border-bottom: 2px solid #fcf0b9;
 }
