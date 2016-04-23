@@ -35,6 +35,28 @@ h2 {
   line-height: 1.8;
 }
 
+/** Carousel **/
+#carousel-example-generic{
+	box-shadow: 0 0 5px #ccc;
+    border: 5px solid #fff;
+}
+
+.carousel-caption{
+
+	right: initial;
+    left: initial;
+    bottom: 0px;
+    padding-bottom: 24px;
+    padding-top: 12px;
+    background-color: #C97954;
+    width: 100%;
+}
+
+.carousel-indicators{
+	padding-bottom: 0px;
+	bottom: 6px;
+}
+
 .yellow-line{
 	border-bottom: 2px solid #fcf0b9;
 }
@@ -299,3 +321,5 @@ p.small{
 .further-info:hover{
 	background-color: #eba03a; /** #eba03a */
 }
+
+

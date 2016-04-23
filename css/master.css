@@ -80,6 +80,8 @@ body {
 		position: absolute;
 		top: 100%;
 		display: none;
+		float: none;
+		left: initial;
 	}
 		.dropdown-menu li {
 		float: none;
