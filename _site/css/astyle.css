@@ -1,0 +1,73 @@
+/**
+ *	File: style.css
+ * 	Description: added css styles to Peter Lightbody's update on the Sukyo Mahikari Website
+ *	Author: Liching Yew
+ *
+ */
+
+body{
+	background-image: url("../../img/mural-square-v2.jpg");
+	font-family: 'Open Sans', sans-serif;
+}
+
+header{
+	background-color: #fff;
+}
+
+#contents{
+	background-color: rgba(256, 256, 256, 0.6);
+	padding: 0px;
+}
+
+.slideshow{
+	padding: 0px;
+}
+
+.other-content{
+	padding: 32px;
+}
+
+.page-title{
+	font-size: 32px;
+	background-color: #C97954;
+	font-weight: 100;
+	text-align: center;
+	color: #fff;
+	padding: 12px 0px;
+}
+
+.parParagraph {
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0 0 18px 0;
+}
+
+.parParagraph a{
+	color: #C97954;
+}
+
+.parParagraph a:hover{
+	border-bottom: 1px solid #C97954;
+}
+
+.fifty-percent{
+	width: 50%;
+	display: inline-block;
+}
+
+.thirty-three-percent{
+	width: 33.333%;
+	display: inline-block;
+}
+
+.image{
+	width: 100%;
+}
+
+.img-caption{
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	text-align: center;
+}

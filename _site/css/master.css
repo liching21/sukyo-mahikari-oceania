@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+body {
+	background-color: #fff;
+	/*font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;*/
+	font-family: "Arial", "Helvetica", sans-serif;
+	font-size: 15px;
+	color: #515151;
+}
+
+/* additional styles from original website */
+.parHeading1 {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	color: #C97954;
+	border-bottom: 1px;
+	border-bottom-color: #C97954;
+	margin-bottom: 24px;
+	}
+
+.parParagraph {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	margin: 0 0 20px 0;
+}
+
+ul {
+	margin: 0 0 0 0 0;
+	padding-left: 40px;
+	display: block;
+	list-style-type: disc;
+}
+
+header ul {
+	list-style-type: none;
+}
+
+.disclaimer {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #9b9b9b;
+}
+/* end of additional styles */
+
+a {
+	text-decoration: none;
+	color: #515151;
+}
+	a:hover {
+		color: #C97954;
+	}
+
+
+header {
+
+}
+
+#headerIn {
+	margin: 0 auto;
+	width: 960px;
+	position: relative;
+}
+#countryLink {
+	position: absolute;
+	top: -20px;
+	left: 0;
+	line-height: 1;
+}
+#countryLink li {
+	float: left;
+	margin: 0;
+	border-right: 1px solid #fff;
+	padding: 0 10px
+}
+	#countryLink li a {
+		color: #fff;
+		display: block;
+		text-decoration: none;
+		font-size: 13px;
+	}
+		#countryLink li a:hover {
+			color: #51FFFF;
+		}
+#siteMap {
+	position: absolute;
+	top: -20px;
+	right: 0;
+	line-height: 1;
+}
+	#siteMap a {
+		color: #fff;
+		font-size: 13px;
+		display: block;
+		text-decoration: none;
+		background: url(../img/icon_sitemap.png) left top no-repeat;
+		padding: 0 0 0 20px;
+	}
+		#siteMap a:hover {
+			 color: #51FFFF;
+		}
+
+#headLogo {
+	text-align: center;
+	background: url(../img/logo_jp.png) 10px 10px no-repeat;
+	padding: 20px 0 0 0;
+}
+
+nav {
+	margin: 30px 0 0 0;
+}
+nav ul {
+	text-align: center;
+	line-height: 2;
+}
+	nav ul li {
+		display: inline-block;
+		padding: 0 20px 0 0;
+	}
+		nav ul li a {
+			display: block;
+		}
+
+#contents {
+	width: 960px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+footer {
+	margin: 50px 0 0 0;
+	background-color: #C97954;
+	border-top: 25px solid #ECCFC2;
+}
+
+#footerIn {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 30px 0;
+}
+.iconGohonzan {
+	position: absolute;
+	top: -68px;
+	left: 434px;
+}
+
+#address {
+	margin: 20px 0;
+}
+address {
+	font-style: normal;
+	color: #fff;
+}
+
+small {
+	font-size: 11px;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+}
