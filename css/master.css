@@ -49,7 +49,7 @@ body {
 
 }
 	#nav-menu li:hover {
-		background: #eba03a;
+		background: #C97954;
 		border-bottom: 1px solid #666;
 	}
 		#nav-menu li:hover a {
@@ -94,7 +94,7 @@ body {
 			color: #fff;
 		}
 			#nav-menu .dropdown-menu li a:hover {
-				background: #eba03a;
+				background: #C97954;
 				color: #eee;
 			}
 
@@ -121,7 +121,7 @@ a {
 	cursor: pointer;
 }
 	a:hover {
-		color: #eba03a;
+		color: #C97954;
 	}
 
 

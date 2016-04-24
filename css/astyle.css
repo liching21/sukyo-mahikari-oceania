@@ -31,7 +31,7 @@ h2 {
   font-size: 24px;
   font-weight: 300;
   padding: 24px 0px 12px 0px;
-  color: #EEA849;
+  color: #C97C54;
   line-height: 1.8;
 }
 
@@ -58,24 +58,30 @@ h2 {
 }
 
 .index-content{
-
+	padding-right: 12px;
 }
 
 .index-menu-box{
 	vertical-align: text-bottom;
+	padding-left: 12px;
+    border-left: 1px solid #ECCFC2;
 }
 
 .menu-item{
 	width: 120px;
 	height: 120px;
-	border: 2px solid #EEA849;
+	border: 2px solid #C97954;
 	border-radius: 12px;
 	margin: 6px;
 	display: inline-block;
 	background-color: #fff;
-
+	cursor: pointer;
+	box-shadow: 0 0 5px #ccc;
 }
 
+.menu-item:hover{
+	color: #C97954;
+}
 .menu-item span{
 	width: 120px;
 	height: 120px;
@@ -121,18 +127,18 @@ h2 {
 .parParagraph {
     font-family: 'Open Sans', arial, helvetica, sans-serif;
     font-size: 15px;
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
     margin: 0 0 18px 0;
 }
 
 .parParagraph a{
-	color: #eea849;
+	color: #C97954;
 	font-weight: 600;
 }
 
 .parParagraph a:hover{
-	border-bottom: 1px solid #eea849;
+
 }
 
 .hundred-percent{
@@ -267,6 +273,7 @@ h2 {
 .loc-address p{
 	font-size: 18px;
     font-weight: 300;
+    line-height: 1.5;
 }
 
 p.small{
