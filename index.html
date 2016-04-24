@@ -7,11 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <base href="http://lichingyew.com/sukyo-mahikari-oceania/">
-  <!-- <base href="http://127.0.0.1:4000/"> -->
+  <!-- <base href="http://127.0.0.1:4000/">-->
 
   <title>Sukyo Mahikari Australia Oceania</title>
   <meta name="description" content="Non-denominational spiritual organisation。">
   <meta name="keywords" content="Sukyo Mahikari">
+
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/master.css">
@@ -21,93 +30,145 @@
   <link rel="alternate" type="application/rss+xml" title="Sukyo Mahikari Australia Oceania" href="http://lichingyew.comfeed.xml">
   <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
 
-  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
-
-
 
   <body>
 
     <header>
-  <nav>
-    <div id="nav-logo"><a href="index.html"><img src="img/logo_goshinmon_en-bar.png"/></a></div>
-    <ul id="nav-menu">
-      <li><a data-ajax-link="pages/ourVision.html" href="#">Our Vision</a>
-        <ul class="dropdown-menu">
-          <li><a data-ajax-link="pages/artSpiritualPurification.html" href="#">The Art of Spiritual Purification</a></li>
-          <li><a data-ajax-link="pages/holyMasters.html" href="#">The Founder and Spiritual Leaders</a></li>
-        </ul>
-      </li>
-      <li><a data-ajax-link="pages/yourInterest.html" href="#">What is Your Interest?</a>
-        <ul class="dropdown-menu">
-          <li><a data-ajax-link="pages/interests/whatIsSukyoMahikari.html" href="#">What is Sukyo Mahikari?</a></li>
-          <li><a data-ajax-link="pages/interests/youth21stCentury.html" href="#">Youth in the 21st Century</a></li>
-          <li><a data-ajax-link="pages/interests/healthWellbeing.html" href="#">Holistic Health and Well-being</a></li>
-          <li><a data-ajax-link="pages/interests/relationshipsFamily.html" href="#">Relationships and Happy Families</a></li>
-          <li><a data-ajax-link="pages/interests/financilEconomicProsperity.html" href="#">Financial and Economic Prosperity</a></li>
-          <li><a data-ajax-link="pages/interests/sustainableEnvironmentAgriculture.html" href="#">Sustainable Environment and Agriculture</a></li>
-          <li><a data-ajax-link="pages/interests/religousHarmony.html" href="#">Religious Harmony</a></li>
-          <li><a data-ajax-link="pages/interests/workStudiesDailyLife.html" href="#">Fulfilment in Work, Studies and Daily Life</a></li>
-          <li><a data-ajax-link="pages/interests/personalSpirituality.html" href="#">Personal Spirituality</a></li>
-          <li><a data-ajax-link="pages/interests/furtherReading.html" href="#">Further Reading – literature and websites</a></li>
-        </ul>
-      </li>
-      <li><a data-ajax-link="pages/gallery.html" href="#">Gallery</a></li>
-      <li><a data-ajax-link="pages/questionsAnswers.html" href="#">Q&A</a></li>
-      <li><a data-ajax-link="pages/contactUs.html" href="#">Contact Us</a></li>
-    </ul>
-  </nav>
-  <div class="yellow-line"></div>
+
+  <div id="headerIn">
+
+    <div id="headLogo"><a href="index.html"><img src="img/logo_goshinmon_en.png" width="192" height="73" alt=""/></a></div>
+    <nav id="nav-bar">
+      <ul id="nav-menu">
+        <li><a data-ajax-link="pages/ourVision.html" href="#">Our Vision</a>
+          <ul class="dropdown-menu">
+            <li><a data-ajax-link="pages/artSpiritualPurification.html" href="#">The Art of Spiritual Purification</a></li>
+            <li><a data-ajax-link="pages/holyMasters.html" href="#">The Founder and Spiritual Leaders</a></li>
+          </ul>
+        </li>
+        <li><a data-ajax-link="pages/yourInterest.html" href="#">What is Your Interest?</a>
+          <ul class="dropdown-menu">
+            <li><a data-ajax-link="pages/interests/whatIsSukyoMahikari.html" href="#">What is Sukyo Mahikari?</a></li>
+            <li><a data-ajax-link="pages/interests/youth21stCentury.html" href="#">Youth in the 21st Century</a></li>
+            <li><a data-ajax-link="pages/interests/healthWellbeing.html" href="#">Holistic Health and Well-being</a></li>
+            <li><a data-ajax-link="pages/interests/relationshipsFamily.html" href="#">Relationships and Happy Families</a></li>
+            <li><a data-ajax-link="pages/interests/financilEconomicProsperity.html" href="#">Financial and Economic Prosperity</a></li>
+            <li><a data-ajax-link="pages/interests/sustainableEnvironmentAgriculture.html" href="#">Sustainable Environment and Agriculture</a></li>
+            <li><a data-ajax-link="pages/interests/religousHarmony.html" href="#">Religious Harmony</a></li>
+            <li><a data-ajax-link="pages/interests/workStudiesDailyLife.html" href="#">Fulfilment in Work, Studies and Daily Life</a></li>
+            <li><a data-ajax-link="pages/interests/personalSpirituality.html" href="#">Personal Spirituality</a></li>
+            <li><a data-ajax-link="pages/interests/furtherReading.html" href="#">Further Reading – literature and websites</a></li>
+          </ul>
+        </li>
+        <li><a data-ajax-link="pages/gallery.html" href="#">Gallery</a></li>
+        <li><a data-ajax-link="pages/questionsAnswers.html" href="#">Q&A</a></li>
+        <li><a data-ajax-link="pages/contactUs.html" href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="light-red-line"></div>
 </header>
 
 
     <div id="contents">
-	<h1 class="page-title">Welcome to Sukyo Mahikari</h1>
 
-		<p class="parParagraph text-center" style="margin-top: 40px">Welcome to the official website for Sukyo Mahikari Australia-Oceania Region, which introduces the organisation’s purpose, establishment, history and activities.</p>
-		<p class="parParagraph text-center">Sukyo Mahikari is an international, non-denominational spiritual organisation that is dedicated to developing a civilisation of eternal peace and prosperity for all humankind.</p>
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+	  </ol>
 
-	<div class="slideshow" align="center">
-		<object width="100%" height="500" data="multimedia/SMAO-home.swf">
-		</object>
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner" role="listbox">
+	    <div class="item active">
+	      <img src="img/suza front.jpg" alt="Front of Suza">
+	      <div class="carousel-caption">
+	        This is the front of Suza
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="img/suza in mountains.jpg" alt="Suza in the mountains">
+	      <div class="carousel-caption">
+	        Suza in the mountains
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="img/suza performance.jpg" alt="Performace in front of Suza">
+	      <div class="carousel-caption">
+	        Performance in front of Suza
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="img/suza cherry blossom.jpg" alt="Suza with Cherry Blossoms">
+	      <div class="carousel-caption">
+	        Suza with Cherry Blossoms
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="img/suza in snow.jpg" alt="Suza in snow">
+	      <div class="carousel-caption">
+	        Suza in Winter
+	      </div>
+	    </div>
+	  </div>
+
+	  <!-- Controls -->
+	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
 	</div>
 
 	<div class="other-content">
-		<p class="parParagraph">We have Mahikari Centres in 75 countries worldwide, with our headquarters in Takayama, Japan.</p>
-		<p class="parParagraph">Sukyo Mahikari Australia-Oceania Region consists of Australia, New Zealand, Fiji and Papua New Guinea, with the Region’s headquarters located in Canberra, Australia.</p>
-		<p class="parParagraph">See the ‘<a data-ajax-link="pages/ourVision.html" href="#">Our Vision</a>’ link for the purpose and aims of the Sukyo Mahikari organisation, with further information about the <a href="pages/holyMasters.html">founder</a> and the <a href="pages/artSpiritualPurification.html">practice of spiritual purification</a>.</p>
 
-		<div class="black-line"></div>
+		<div class="sixty-six-percent index-content">
+			<p class="parParagraph" style="margin-top: 40px">Welcome to the official website for Sukyo Mahikari Australia-Oceania Region, which introduces the organisation’s purpose, establishment, history and activities.</p>
 
-		<p class="parParagraph">For more information on what <a href="pages/yourInterest.html">Sukyo Mahikari</a> is all about, please visit the following links:</p>
-			<ul class="list-2-col">
-				<li class="parParagraph"><a href="pages/interests/whatIsSukyoMahikari.html">What is Sukyo Mahikari?</a></li>
-				<li class="parParagraph"><a href="pages/interests/youth21stCentury.html">Youth in the 21st Century</a></li>
-				<li class="parParagraph"><a href="pages/interests/healthWellbeing.html">Holistic Health and Well-being</a></li>
-				<li class="parParagraph"><a href="pages/interests/relationshipsFamily.html">Relationships and Happy Families</a></li>
-				<li class="parParagraph"><a href="pages/interests/financilEconomicProsperity.html">Financial and Economic Prosperity</a></li>
-				<li class="parParagraph"><a href="pages/interests/sustainableEnvironmentAgriculture.html">Sustainable Environment and Agriculture</a></li>
-				<li class="parParagraph"><a href="pages/interests/religousHarmony.html">Religious Harmony</a></li>
-				<li class="parParagraph"><a href="pages/interests/workStudiesDailyLife.html">Fulfilment in Work, Studies and Daily Life</a></li>
-				<li class="parParagraph"><a href="pages/interests/personalSpirituality.html">Personal Spirituality</a></li>
-				<li class="parParagraph"><a href="pages/yourInterest.html#furtherReading">Further Reading – literature and websites</a></li>
-			</ul>
+			<p class="parParagraph">Sukyo Mahikari is an international, non-denominational spiritual organisation that is dedicated to developing a civilisation of eternal peace and prosperity for all humankind.</p>
 
-		<div class="black-line"></div>
+			<p class="parParagraph">We have Mahikari Centres in 75 countries worldwide, with our headquarters in Takayama, Japan.</p>
 
-		<p class="parParagraph">For more, see the <a href="pages/gallery.html">‘Photo Gallery’</a> and <a href="pages/questionsAnswers.html">‘Questions and Answers’</a> links.</p>
+			<p class="parParagraph">Sukyo Mahikari Australia-Oceania Region consists of Australia, New Zealand, Fiji and Papua New Guinea, with the Region’s headquarters located in Canberra, Australia.</p>
+			<p class="parParagraph">See the ‘<a data-ajax-link="pages/ourVision.html" href="#">Our Vision</a>’ link for the purpose and aims of the Sukyo Mahikari organisation, with further information about the <a href="pages/holyMasters.html">founder</a> and the <a href="pages/artSpiritualPurification.html">practice of spiritual purification</a>.</p>
 
-		<div class="black-line"></div>
+		</br></br></br>
 
-		<p class="parParagraph">You are most welcome to visit our <a href="pages/contactUs.html">public community Centres</a>.</p>
+		</div><div class="thirty-three-percent index-menu-box">
+			<h2>Related Links</h2>
+
+			<div class="menu-item">
+				<span>Our Vision</span>
+			</div>
+			<div class="menu-item">
+				<span>What is your Interest?</span>
+			</div>
+			<div class="menu-item">
+				<span>Gallery</span>
+			</div>
+			<div class="menu-item">
+				<span>Q & A</span>
+			</div>
+			<div class="menu-item">
+				<span>Contact Us</span>
+			</div>
+		</div>
 	</div> <!-- other-contents -->
 </div> <!-- contents -->
 
 
     <footer>
   <div id="footerIn">
-    <img class="iconGohonzan" src="img/icon_gohonzan-orange.png" width="92" height="70" alt=""/>
+    <img class="iconGohonzan" src="img/icon_gohonzan.png" width="92" height="70" alt=""/>
     <img src="img/logo_jp_white.png" width="136" height="52" alt=""/>
     <div id="address">
       <address>Sukyo Mahikari Australia Oceania<br>3 Mulley Street<br>Holder ACT 2611<br>Australia</address>
@@ -125,6 +186,11 @@
 
 			$(".other-content a").click(function() {
 				// get the page that we want
+
+				if($(this).attr("data-ajax-link") == undefined){
+					return false;
+				}
+
 				var loadPage = $(this).attr("data-ajax-link");
 
 				console.log("loading in other content: " + loadPage);

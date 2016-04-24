@@ -6,7 +6,7 @@
  */
 
 body{
-	background-image: url("../img/sunflower-field-1.jpg");
+	background-image: url("../img/sunflower-field-1-white.jpg");
 	/** background-image: url("../img/sunflower-field-3.jpg"); */
 	/** background-image: url("../img/sunflower-field-3.jpg"); */
 	/** background: -webkit-linear-gradient(269deg, rgba(245,113,12,1) 0%, rgba(240,228,5,1) 100%); /* safari5.1+,chrome10+ */
@@ -17,7 +17,7 @@ body{
 }
 
 header{
-	background-color: #eea849;
+	background-color: #fff;
 	padding: 0px;
 }
 
@@ -31,21 +31,73 @@ h2 {
   font-size: 24px;
   font-weight: 300;
   padding: 24px 0px 12px 0px;
-  color: #EEA849;
+  color: #C97C54;
   line-height: 1.8;
 }
 
-#nav-logo{
-	display: inline-block;
+/** Carousel **/
+#carousel-example-generic{
+	box-shadow: 0 0 5px #ccc;
+    border: 5px solid #fff;
 }
 
-#nav-logo a{
-	padding: 10px 10px 6px 12px;
-	display: block;
+.carousel-caption{
+
+	right: initial;
+    left: initial;
+    bottom: 0px;
+    padding-bottom: 24px;
+    padding-top: 12px;
+    background-color: #C97954;
+    width: 100%;
+}
+
+.carousel-indicators{
+	padding-bottom: 0px;
+	bottom: 6px;
+}
+
+.index-content{
+	padding-right: 12px;
+}
+
+.index-menu-box{
+	vertical-align: text-bottom;
+	padding-left: 12px;
+    border-left: 1px solid #ECCFC2;
+}
+
+.menu-item{
+	width: 120px;
+	height: 120px;
+	border: 2px solid #C97954;
+	border-radius: 5px;
+	margin: 6px;
+	display: inline-block;
+	background-color: #fff;
+	cursor: pointer;
+	box-shadow: 0 0 5px #ccc;
+}
+
+.menu-item:hover{
+	color: #C97954;
+	border: 2px solid #ECCFC2;
+}
+.menu-item span{
+	width: 120px;
+	height: 120px;
+	vertical-align: middle;
+	display: table-cell;
+	text-align: center;
+
 }
 
 .yellow-line{
 	border-bottom: 2px solid #fcf0b9;
+}
+
+.light-red-line{
+	border-bottom: 2px solid #ECCFC2;
 }
 
 #contents{
@@ -76,18 +128,18 @@ h2 {
 .parParagraph {
     font-family: 'Open Sans', arial, helvetica, sans-serif;
     font-size: 15px;
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
     margin: 0 0 18px 0;
 }
 
 .parParagraph a{
-	color: #eea849;
+	color: #C97954;
 	font-weight: 600;
 }
 
 .parParagraph a:hover{
-	border-bottom: 1px solid #eea849;
+
 }
 
 .hundred-percent{
@@ -222,6 +274,7 @@ h2 {
 .loc-address p{
 	font-size: 18px;
     font-weight: 300;
+    line-height: 1.5;
 }
 
 p.small{
@@ -304,3 +357,5 @@ p.small{
 .further-info:hover{
 	background-color: #eba03a; /** #eba03a */
 }
+
+

@@ -29,13 +29,13 @@ body {
 	margin: 0 0 20px 0;
 }
 
+#nav-bar{
+	text-align: center;
+}
+
 #nav-menu{
-	width: 70%;
-    float: right;
-    font-size: 18px;
-    text-align: right;
-    list-style: none;
-	position: relative;
+
+    font-size: 16px;
 	display: inline-table;
 }
 
@@ -49,7 +49,7 @@ body {
 
 }
 	#nav-menu li:hover {
-		background: #eba03a;
+		background: #C97954;
 		border-bottom: 1px solid #666;
 	}
 		#nav-menu li:hover a {
@@ -58,7 +58,7 @@ body {
 
 	#nav-menu li a {
 		display: block;
-		padding: 16px 12px 17px 12px;
+		padding: 12px;
 		color: #333;
 		text-decoration: none;
 		font-weight: 300;
@@ -80,6 +80,8 @@ body {
 		position: absolute;
 		top: 100%;
 		display: none;
+		float: none;
+		left: initial;
 	}
 		.dropdown-menu li {
 		float: none;
@@ -92,7 +94,7 @@ body {
 			color: #fff;
 		}
 			#nav-menu .dropdown-menu li a:hover {
-				background: #eba03a;
+				background: #C97954;
 				color: #eee;
 			}
 
@@ -119,7 +121,7 @@ a {
 	cursor: pointer;
 }
 	a:hover {
-		color: #eba03a;
+		color: #C97954;
 	}
 
 
@@ -134,12 +136,15 @@ header {
 	position: relative;
 }
 
-/**
 #headLogo {
 	text-align: center;
-	background: url(../img/logo_jp.png) 10px 10px no-repeat;
+	background: url(../../img/logo_jp.png) 10px 10px no-repeat;
 	padding: 20px 0 0 0;
-}*/
+}
+
+#headLogo img{
+	padding-bottom: 12px;
+}
 
 nav ul {
 	text-align: center;
@@ -164,8 +169,8 @@ footer {
 	background-color: #C97954;
 	border-top: 25px solid #ECCFC2;*/
 
-	background-color: #eba03a;
-	border-top: 25px solid #fcf0b9;
+	background-color: #C97954;
+    border-top: 25px solid #ECCFC2;
 }
 
 #footerIn {
