@@ -18,6 +18,11 @@
 
 			$(".other-content a").click(function() {
 				// get the page that we want
+
+				if($(this).attr("data-ajax-link") == undefined){
+					return false;
+				}
+
 				var loadPage = $(this).attr("data-ajax-link");
 
 				console.log("loading in other content: " + loadPage);
