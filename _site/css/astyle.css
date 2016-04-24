@@ -71,7 +71,7 @@ h2 {
 	width: 120px;
 	height: 120px;
 	border: 2px solid #C97954;
-	border-radius: 12px;
+	border-radius: 5px;
 	margin: 6px;
 	display: inline-block;
 	background-color: #fff;
@@ -81,6 +81,7 @@ h2 {
 
 .menu-item:hover{
 	color: #C97954;
+	border: 2px solid #ECCFC2;
 }
 .menu-item span{
 	width: 120px;
