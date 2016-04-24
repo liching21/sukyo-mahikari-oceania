@@ -6,7 +6,6 @@
  */
 
 body{
-<<<<<<< Updated upstream
 	background-image: url("../img/sunflower-field-1-white.jpg");
 	/** background-image: url("../img/sunflower-field-3.jpg"); */
 	/** background-image: url("../img/sunflower-field-3.jpg"); */
@@ -24,31 +23,9 @@ header{
 
 body,
 header{
-||||||| merged common ancestors
-	background-image: url("../img/sunflower-field-1.jpg");
-	/** background-image: url("../img/sunflower-field-3.jpg"); */
-	/** background-image: url("../img/sunflower-field-3.jpg"); */
-	/** background: -webkit-linear-gradient(269deg, rgba(245,113,12,1) 0%, rgba(240,228,5,1) 100%); /* safari5.1+,chrome10+ */
-	background-position:center;
-	background-size: cover;
-	background-attachment: fixed;
-	color: #666;
-}
-
-header{
-	background-color: #eea849;
-	padding: 0px;
-}
-
-body,
-header{
-=======
-	background-image: url("../../img/mural-square-v2.jpg");
->>>>>>> Stashed changes
 	font-family: 'Open Sans', sans-serif;
 }
 
-<<<<<<< Updated upstream
 h2 {
   text-align: left;
   font-size: 24px;
@@ -117,31 +94,6 @@ h2 {
 
 .yellow-line{
 	border-bottom: 2px solid #fcf0b9;
-||||||| merged common ancestors
-h2 {
-  text-align: left;
-  font-size: 24px;
-  font-weight: 300;
-  padding: 24px 0px 12px 0px;
-  color: #EEA849;
-  line-height: 1.8;
-}
-
-#nav-logo{
-	display: inline-block;
-}
-
-#nav-logo a{
-	padding: 10px 10px 6px 12px;
-	display: block;
-}
-
-.yellow-line{
-	border-bottom: 2px solid #fcf0b9;
-=======
-header{
-	background-color: #fff;
->>>>>>> Stashed changes
 }
 
 .light-red-line{
@@ -149,12 +101,15 @@ header{
 }
 
 #contents{
-	background-color: rgba(256, 256, 256, 0.6);
-	padding: 0px;
+	background-color: rgba(256, 256, 256, 0.90);
+	padding: 24px 24px 120px 24px;
 }
 
 .slideshow{
-	padding: 0px;
+	box-shadow: 0 0 5px #ccc;
+    border: 5px solid #fff;
+    border-bottom-width: 1px;
+    background: #fff;
 }
 
 .other-content{
@@ -163,11 +118,11 @@ header{
 
 .page-title{
 	font-size: 32px;
-	background-color: #C97954;
 	font-weight: 100;
 	text-align: center;
-	color: #fff;
-	padding: 12px 0px;
+	color: #666;
+	padding: 12px 0px 35px 0px;
+	border-bottom: 1px solid #666;
 }
 
 .parParagraph {
@@ -179,19 +134,11 @@ header{
 }
 
 .parParagraph a{
-<<<<<<< Updated upstream
 	color: #C97954;
 	font-weight: 600;
-||||||| merged common ancestors
-	color: #eea849;
-	font-weight: 600;
-=======
-	color: #C97954;
->>>>>>> Stashed changes
 }
 
 .parParagraph a:hover{
-<<<<<<< Updated upstream
 
 }
 
@@ -208,26 +155,6 @@ header{
 .sixty-six-percent{
 	width: 66.66%;
 	display: inline-block;
-||||||| merged common ancestors
-	border-bottom: 1px solid #eea849;
-}
-
-.hundred-percent{
-	width: 100%;
-	display: inline-block;
-}
-
-.seventy-five-percent{
-	width: 75%;
-	display: inline-block;
-}
-
-.sixty-six-percent{
-	width: 66.66%;
-	display: inline-block;
-=======
-	border-bottom: 1px solid #C97954;
->>>>>>> Stashed changes
 }
 
 .fifty-percent{
@@ -240,13 +167,52 @@ header{
 	display: inline-block;
 }
 
+.twenty-five-percent{
+	width: 25%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.content-image-right{
+	width: 100%;
+	border-radius: 12px;
+	margin-left: 12px;
+}
+
+.content-image-left{
+	width: 100%;
+	border-radius: 12px;
+
+}
+
+.content-right{
+	margin-left: 24px;
+}
+
 .image{
 	width: 100%;
+	border-radius: 8px;
+}
+
+.img-caption-right{
+	background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    margin-left: 12px;
+    width: 100%;
+}
+
+.img-caption-left{
+	background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    width: 100%;
 }
 
 .img-caption{
 	background-color: rgba(0, 0, 0, 0.6);
-<<<<<<< Updated upstream
     color: #fff;
     text-align: center;
     border-radius: 8px;
@@ -383,147 +349,8 @@ p.small{
 	padding: 24px 12px;
 	background-color: #ecaf5c;
 	text-shadow: 1px 1px #555;
-||||||| merged common ancestors
-    color: #fff;
-    text-align: center;
-    border-radius: 8px;
-    margin-left: 12px;
-    width: 100%;
-}
-
-.list-2-col{
-	columns: 2;
-  	-webkit-columns: 2;
-  	-moz-columns: 2;
-  	list-style-type: none;
-}
-
-.black-line{
-	border-bottom: 1px solid #666;
-	margin-bottom: 18px;
-}
-
-.text-center{
-	text-align: center;
-}
-
-/** Contact Us page */
-
-.location-row{
-	margin: 24px 50px;
-	position: relative;
-}
-
-.loc-image{
-	width: 45%;
-	display: inline-block;
-	padding-right: 24px;
-	border-right: 1px solid #aaa;
-}
-
-.loc-image .image{
-	border-radius: 12px;
-}
-
-.loc-address{
-	width: 48%;
-	display: inline-block;
-	padding-left: 24px;
-	color: #666;
-	margin: 0;
-   	position: absolute;
-   	top: 50%;
-   	transform: translate(0, -50%);
-}
-
-.loc-name{
-	font-weight: 300;
-    font-size: 27px;
-    padding-bottom: 24px;
-}
-
-.loc-address p{
-	font-size: 18px;
-    font-weight: 300;
-}
-
-p.small{
-	font-size: 14px;
-    font-style: italic;
-}
-
-/** yourInterest.html */
-
-.interest-row{
-	background-color: #FBDFB9;
-	border-radius: 8px;
-	line-height: 1;
-	font-size: 0;
-	box-shadow: 2px 2px #bbb;
-	cursor: pointer;
-	position: relative;
-	margin-bottom: 12px;
-	height: 130px;
-	overflow: hidden;
-}
-
-.interest-row:hover{
-
-}
-
-.interest-image{
-	width: 100%;
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
-}
-
-.interest-content{
-    padding: 24px 24px 0px 24px;
-    font-size: 14px;
-}
-
-.interest-name{
-	font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 12px;
-}
-
-.interest-description{
-	font-size: 14px;
-    line-height: 24px;
-}
-
-.interest-overlay{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: 10;
-	top: 0px;
-	border-radius: 8px;
-}
-
-.interest-overlay:hover{
-	background: rgba(238, 168, 73, 0.9);
-	transition: all 0.2s;
-}
-
-.more{
-	float: right;
-	font-weight: 400;
-}
-
-.further-info{
-	width: 97.7%;
-	font-size: 18px;
-	margin-top: 32px;
-	padding: 24px 12px;
-	background-color: #ecaf5c;
-	text-shadow: 1px 1px #555;
-=======
->>>>>>> Stashed changes
 	color: #fff;
 	text-align: center;
-<<<<<<< Updated upstream
 	border-radius: 8px;
 }
 
@@ -532,13 +359,3 @@ p.small{
 }
 
 
-||||||| merged common ancestors
-	border-radius: 8px;
-}
-
-.further-info:hover{
-	background-color: #eba03a; /** #eba03a */
-}
-=======
-}
->>>>>>> Stashed changes
