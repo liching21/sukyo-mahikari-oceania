@@ -31,7 +31,7 @@ h2 {
   font-size: 24px;
   font-weight: 300;
   padding: 24px 0px 12px 0px;
-  color: #C97C54;
+  color: #EBA03A;
   line-height: 1.8;
 }
 
@@ -48,7 +48,7 @@ h2 {
     bottom: 0px;
     padding-bottom: 24px;
     padding-top: 12px;
-    background-color: #C97954;
+    background-color: #EBA03A;
     width: 100%;
 }
 
@@ -64,13 +64,13 @@ h2 {
 .index-menu-box{
 	vertical-align: text-bottom;
 	padding-left: 12px;
-    border-left: 1px solid #ECCFC2;
+    border-left: 1px solid #FCF0B9;
 }
 
 .menu-item{
 	width: 120px;
 	height: 120px;
-	border: 2px solid #C97954;
+	border: 2px solid #EBA03A;
 	border-radius: 5px;
 	margin: 6px;
 	display: inline-block;
@@ -80,8 +80,8 @@ h2 {
 }
 
 .menu-item:hover{
-	color: #C97954;
-	border: 2px solid #ECCFC2;
+	color: #EBA03A;
+	border: 2px solid #FCF0B9;
 }
 .menu-item span{
 	width: 120px;
@@ -134,7 +134,7 @@ h2 {
 }
 
 .parParagraph a{
-	color: #C97954;
+	color: #EBA03A;
 	font-weight: 600;
 }
 
