@@ -121,7 +121,7 @@ h2 {
 	text-align: center;
 	color: #666;
 	padding: 12px 0px 35px 0px;
-	border-bottom: 1px solid #666;
+	/** border-bottom: 1px solid #666; */
 }
 
 .parParagraph {
