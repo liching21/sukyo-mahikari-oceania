@@ -294,16 +294,18 @@ p.small{
 /** yourInterest.html */
 
 .interest-row{
-	background-color: #FBDFB9;
-	border-radius: 8px;
-	line-height: 1;
-	font-size: 0;
-	box-shadow: 2px 2px #bbb;
-	cursor: pointer;
-	position: relative;
-	margin-bottom: 12px;
-	height: 130px;
-	overflow: hidden;
+    line-height: 1;
+    font-size: 0;
+    position: relative;
+    margin-bottom: 12px;
+    height: 130px;
+    overflow: hidden;
+    border: 2px solid #EBA03A;
+    border-radius: 12px;
+    display: inline-block;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ccc;
 }
 
 .interest-row:hover{
@@ -352,7 +354,7 @@ p.small{
 }
 
 .further-info{
-	width: 97.7%;
+	width: 100%;
 	font-size: 18px;
 	margin-top: 32px;
 	padding: 24px 12px;
