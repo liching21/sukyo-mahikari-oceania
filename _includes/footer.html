@@ -13,6 +13,8 @@
 <script>
 	$(document).ready(function() {
 
+		history.pushState(null, "", 'index.html');
+
 		// When a linked is clicked in the content
 		function setLinks() {
 
@@ -92,9 +94,11 @@
 		}
 
 		window.addEventListener("popstate", function(e) {
-    		console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+    		//console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
     		//setLastLink(document.location);
-    		window.location.href = document.location;
+    		//window.location.href = document.location;
+
+    		console.log("popstate fired!");
     	});
 	});
 </script>

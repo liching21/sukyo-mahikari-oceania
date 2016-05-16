@@ -271,7 +271,14 @@ h2 {
 	margin: 0;
    	position: absolute;
    	top: 50%;
-   	transform: translate(0, -50%);
+   	/**transform: translate(0, -50%);*/
+
+   	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 1000;
 }
 
 .loc-name{

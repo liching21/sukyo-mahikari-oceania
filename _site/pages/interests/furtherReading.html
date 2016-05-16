@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/">-->
+  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/"> -->
   <base href="http://127.0.0.1:4000/">
 
   <title>Sukyo Mahikari Australia Oceania</title>
@@ -131,6 +131,8 @@
 <script>
 	$(document).ready(function() {
 
+		history.pushState(null, "", 'index.html');
+
 		// When a linked is clicked in the content
 		function setLinks() {
 
@@ -210,9 +212,11 @@
 		}
 
 		window.addEventListener("popstate", function(e) {
-    		console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+    		//console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
     		//setLastLink(document.location);
-    		window.location.href = document.location;
+    		//window.location.href = document.location;
+
+    		console.log("popstate fired!");
     	});
 	});
 </script>
