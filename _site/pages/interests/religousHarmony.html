@@ -124,7 +124,7 @@
 <script>
 	$(document).ready(function() {
 
-		history.pushState(null, "", 'index.html');
+		//history.pushState(null, "", 'index.html');
 
 		// When a linked is clicked in the content
 		function setLinks() {
@@ -151,6 +151,7 @@
 					$('#contents').fadeOut(function() {
 						$("#contents").html($(data).filter('#contents').html());
 						$('#contents').fadeIn();
+						window.scrollTo(0,0);
 
 						setLinks();
 
@@ -182,6 +183,7 @@
 				$('#contents').fadeOut(function() {
 					$("#contents").html($(data).filter('#contents').html());
 					$('#contents').fadeIn();
+					window.scrollTo(0,0);
 
 					setLinks();
 
@@ -192,25 +194,32 @@
 			return false;
 		});
 
-		function setLastLink(lastPage){
+		setTimeout(function() {
+			window.addEventListener("popstate", function(e) {
+	    		console.log("location: " + document.location + ", state: ");
+	    		console.log(e);
 
-			console.log("here here!");
+	    		// load page
+				$.ajax({
+				  method: "GET",
+				  url: document.location,
+				  dataType: "text"
+				})
+				.done(function( data ) {
 
-			var loadPage = lastPage;
+					$('#contents').fadeOut(function() {
+						$("#contents").html($(data).filter('#contents').html());
+						$('#contents').fadeIn();
+						window.scrollTo(0,0);
 
-			history.pushState(null, "", loadPage);
+						setLinks();
+					});
+				});
 
-			console.log("did we get here?");
+	    		console.log("popstate fired!");
+	    	});
+		}, 500);
 
-		}
-
-		window.addEventListener("popstate", function(e) {
-    		//console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
-    		//setLastLink(document.location);
-    		//window.location.href = document.location;
-
-    		console.log("popstate fired!");
-    	});
 	});
 </script>
 
