@@ -3,8 +3,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <base href="http://lichingyew.com/sukyo-mahikari-oceania/">
-  <!-- <base href="http://127.0.0.1:4000/">-->
+  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/">-->
+  <base href="http://127.0.0.1:4000/">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
@@ -13,6 +13,7 @@
   <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{ "css/reset.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "css/master.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "css/astyle.css" | prepend: site.baseurl }}">
