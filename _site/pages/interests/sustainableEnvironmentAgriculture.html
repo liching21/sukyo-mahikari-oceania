@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <base href="http://lichingyew.com/sukyo-mahikari-oceania/">
-  <!-- <base href="http://127.0.0.1:4000/"> -->
+  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/"> -->
+  <base href="http://127.0.0.1:4000/">
 
   <title>Sukyo Mahikari Australia Oceania</title>
   <meta name="description" content="Non-denominational spiritual organisation。">
@@ -180,6 +180,16 @@
 			var loadPage = $(this).attr("data-ajax-link");
 
 			console.log("loading in nav menu: " + loadPage);
+
+			// clear active nav link
+			$("#nav-menu .orange").removeClass("orange");
+			// find this nav link
+			$("#nav-menu a").each(function() {
+				if ($(this).attr("data-ajax-link") == loadPage) {
+					// make this orange
+					$(this).parents("li").addClass("orange");
+				}
+			});
 
 			// load page
 			$.ajax({

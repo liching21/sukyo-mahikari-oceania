@@ -64,6 +64,19 @@ body {
 		font-weight: 300;
 	}
 
+	#nav-menu li.orange {
+		background: #EBA03A;
+		border-bottom: 1px solid #666;
+	}
+
+	#nav-menu li.orange, #nav-menu li.orange:hover > ul li a {
+		/**color: #ffffff;*/
+	}
+
+	#nav-menu li.orange .dropdown-menu a{
+		color: #333
+	}
+
 	#nav-menu li:hover > ul {
     	display: block;
 	}
