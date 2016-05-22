@@ -13,8 +13,6 @@
 <script>
 	$(document).ready(function() {
 
-		//history.pushState(null, "", 'index.html');
-
 		// When a linked is clicked in the content
 		function setLinks() {
 
@@ -44,7 +42,7 @@
 
 						setLinks();
 
-						history.pushState(null, "", loadPage);
+						history.pushState(null, {{page.title}}, loadPage);
 					});
 				});
 
@@ -86,7 +84,7 @@
 
 					setLinks();
 
-					history.pushState(null, "", loadPage);
+					history.pushState(null, {{page.title}}, loadPage);
 				});
 			});
 
