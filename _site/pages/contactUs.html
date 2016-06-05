@@ -108,7 +108,7 @@
 			<img class="image" src="img/images/mahikariLocations/Melbourne-Centre.jpg" alt="melbourne sukyo mahikari centre"/>
 		</div><div class="loc-address">
 			<h3 class="loc-name">Melbourne Sukyo Mahikari Centre<h3>
-			<p>9 Garden Road,</p>
+			<p>19 Garden Road,</p>
 			<p>Camberwell  VIC  3124</p>
 			<p>Tel:  +61 (0)3 9809 0551</p>
 		</div>
@@ -288,8 +288,17 @@
 
 			$(".other-content a").click(function() {
 				// get the page that we want
+				console.log($(this).attr("href") == undefined);
 
-				if($(this).attr("data-ajax-link") == undefined){
+				// accordion
+				if($(this).attr("data-ajax-link") == undefined && $(this).attr("href") == undefined){
+					console.log("its undefined");
+					return false;
+				}
+				// other links (with href but no data-ajax-link)
+				else if($(this).attr("data-ajax-link") == undefined){
+					console.log("normal link");
+					window.location.href = $(this).attr("href");
 					return false;
 				}
 
@@ -321,9 +330,9 @@
 
 		}
 
-
 		//when a navbar menu item is clicked
-		$("#nav-menu a, .other-content a").click(function() {
+		$("#nav-menu a").click(function() {
+
 			// get the page that we want
 			var loadPage = $(this).attr("data-ajax-link");
 
@@ -331,6 +340,8 @@
 
 			// clear active nav link
 			$("#nav-menu .orange").removeClass("orange");
+
+
 			// find this nav link
 			$("#nav-menu a").each(function() {
 				if ($(this).attr("data-ajax-link") == loadPage) {
@@ -360,6 +371,8 @@
 
 			return false;
 		});
+
+		setLinks();
 
 		setTimeout(function() {
 			window.addEventListener("popstate", function(e) {

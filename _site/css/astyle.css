@@ -126,7 +126,7 @@ h2 {
 
 .parParagraph {
     font-family: 'Open Sans', arial, helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 300;
     font-style: normal;
     margin: 0 0 18px 0;
@@ -397,4 +397,9 @@ p.small{
 	background-color: #eba03a; /** #eba03a */
 }
 
+.bold-text{
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 400;
+}
 

@@ -204,7 +204,7 @@
 		</ul>
 		<!-- / accordion -->
 
-		<h2>God and human beings</h2>
+		<h2>God and Human Beings</h2>
 
 		<ul class="accordion">
 		  <li>
@@ -236,7 +236,7 @@
 		  </li>
 		</ul><!-- / accordion -->
 
-		<h2>Happiness and unhappiness</h2>
+		<h2>Happiness and Unhappiness</h2>
 		<ul class="accordion">
 		  <li>
 		    <a>How can we become truly happy?</a>
@@ -326,7 +326,7 @@
 		  </li>
 		</ul><!-- / accordion -->
 
-		<h2>Life and science</h2>
+		<h2>Life and Science</h2>
 		<ul class="accordion">
 		  <li>
 		    <a>What are the teachings on science?</a>
@@ -369,7 +369,7 @@
 		  </li>
 		</ul><!-- / accordion -->
 
-		<h2>Life and science</h2>
+		<h2>Today's World</h2>
 		<ul class="accordion">
 		  <li>
 		    <a>What is the meaning of the baptism by fire?</a>
@@ -476,8 +476,17 @@
 
 			$(".other-content a").click(function() {
 				// get the page that we want
+				console.log($(this).attr("href") == undefined);
 
-				if($(this).attr("data-ajax-link") == undefined){
+				// accordion
+				if($(this).attr("data-ajax-link") == undefined && $(this).attr("href") == undefined){
+					console.log("its undefined");
+					return false;
+				}
+				// other links (with href but no data-ajax-link)
+				else if($(this).attr("data-ajax-link") == undefined){
+					console.log("normal link");
+					window.location.href = $(this).attr("href");
 					return false;
 				}
 
@@ -509,9 +518,9 @@
 
 		}
 
-
 		//when a navbar menu item is clicked
-		$("#nav-menu a, .other-content a").click(function() {
+		$("#nav-menu a").click(function() {
+
 			// get the page that we want
 			var loadPage = $(this).attr("data-ajax-link");
 
@@ -519,6 +528,8 @@
 
 			// clear active nav link
 			$("#nav-menu .orange").removeClass("orange");
+
+
 			// find this nav link
 			$("#nav-menu a").each(function() {
 				if ($(this).attr("data-ajax-link") == loadPage) {
@@ -548,6 +559,8 @@
 
 			return false;
 		});
+
+		setLinks();
 
 		setTimeout(function() {
 			window.addEventListener("popstate", function(e) {
