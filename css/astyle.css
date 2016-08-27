@@ -1,5 +1,5 @@
 /**
- *	File: style.css
+ *	File: astyle.css
  * 	Description: added css styles to Peter Lightbody's update on the Sukyo Mahikari Website
  *	Author: Liching Yew
  *
@@ -401,5 +401,28 @@ p.small{
 	font-size: 16px;
 	font-size: 1rem;
 	font-weight: 400;
+}
+
+/** Country Link in Footer **/
+
+#countryLink{
+	margin-top: 12px;
+}
+
+#countryLink a{
+	color: #fff;
+	font-style: normal;
+}
+
+#countryLink a:hover{
+	color: #515151;
+	font-style: normal;
+}
+
+#countryLink .fa-circle{
+	font-size: 5px;
+    margin-right: 6px;
+    margin-left: 6px;
+    color: #fff;
 }
 
