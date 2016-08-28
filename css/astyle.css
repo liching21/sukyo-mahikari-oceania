@@ -76,20 +76,38 @@ h2 {
 	background-color: #fff;
 	cursor: pointer;
 	box-shadow: 0 0 5px #ccc;
+	position: relative;
 }
 
-.menu-item:hover{
+.menu-item .fa{
+	position: absolute;
+    padding: 17px 13px;
+    font-size: 83px;
+    color: rgba(235, 160, 58, 0.20);
+}
+
+.menu-item:hover {
 	color: #EBA03A;
 	border: 2px solid #FCF0B9;
 }
-.menu-item span{
-	width: 120px;
-	height: 120px;
-	vertical-align: middle;
-	display: table-cell;
-	text-align: center;
 
+.menu-item:hover .fa {
+	color: rgba(235, 160, 58, 0.20);
+	font-size: 90px;
+	padding: 14px 10px;
 }
+
+.menu-item span{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    font-size: 18px;
+}
+
+
 
 .yellow-line{
 	border-bottom: 2px solid #fcf0b9;
@@ -425,4 +443,5 @@ p.small{
     margin-left: 6px;
     color: #fff;
 }
+
 
