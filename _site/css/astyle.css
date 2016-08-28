@@ -104,10 +104,8 @@ h2 {
     transform: translateY(-50%);
     z-index: 10000;
     width: 100%;
-    font-size: 18px;
+    font-size: 19px;
 }
-
-
 
 .yellow-line{
 	border-bottom: 2px solid #fcf0b9;
@@ -144,7 +142,7 @@ h2 {
 
 .parParagraph {
     font-family: 'Open Sans', arial, helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     font-style: normal;
     margin: 0 0 18px 0;
