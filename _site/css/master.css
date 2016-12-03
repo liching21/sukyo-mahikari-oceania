@@ -49,7 +49,7 @@ body {
 	border-bottom: 1px solid rgba(0,0,0,0);
 }
 	#nav-menu li:hover {
-		background: #EBA03A;
+		background: #C97954;
 		border-bottom: 1px solid #666;
 	}
 		#nav-menu li:hover a {
@@ -65,7 +65,7 @@ body {
 	}
 
 	#nav-menu li.orange {
-		background: #EBA03A;
+		background: #C97954;
 		border-bottom: 1px solid #666;
 	}
 
@@ -108,7 +108,7 @@ body {
 			color: #fff;
 		}
 			#nav-menu .dropdown-menu li a:hover {
-				background: #EBA03A;
+				background: #C97954;
 				color: #eee;
 			}
 
@@ -135,7 +135,7 @@ a {
 	cursor: pointer;
 }
 	a:hover {
-		color: #EBA03A;
+		color: #C97954;
 		text-decoration: none;
 	}
 
@@ -145,12 +145,6 @@ header {
 	padding: 0 0 5px 0;
 }
 
-#headerIn {
-	margin: 0 auto;
-	width: 960px;
-	position: relative;
-}
-
 #headLogo {
 	text-align: center;
 	background: url("http://lichingyew.com/sukyo-mahikari-oceania/img/logo_jp.png") 10px 10px no-repeat;
@@ -158,7 +152,7 @@ header {
 }
 
 #headLogo img{
-	padding-bottom: 12px;
+
 }
 
 nav ul {
@@ -180,12 +174,8 @@ nav ul {
 
 footer {
 
-	/** original red
 	background-color: #C97954;
-	border-top: 25px solid #ECCFC2;*/
-
-	background-color: #EBA03A;
-    border-top: 25px solid #FCF0B9;
+	border-top: 25px solid #ECCFC2;
 }
 
 #footerIn {

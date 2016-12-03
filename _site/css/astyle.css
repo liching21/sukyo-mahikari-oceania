@@ -1,4 +1,4 @@
-/**
+ /**
  *	File: astyle.css
  * 	Description: added css styles to Peter Lightbody's update on the Sukyo Mahikari Website
  *	Author: Liching Yew
@@ -31,7 +31,7 @@ h2 {
   font-size: 24px;
   font-weight: 300;
   padding: 24px 0px 12px 0px;
-  color: #EBA03A;
+  color: #C97954;
   line-height: 1.8;
 }
 
@@ -47,7 +47,7 @@ h2 {
     bottom: 0px;
     padding-bottom: 28px;
     padding-top: 9px;
-    background-color: #EBA03A;
+    background-color: #C97954;
     width: 100%;
 }
 
@@ -63,13 +63,13 @@ h2 {
 .index-menu-box{
 	vertical-align: text-bottom;
 	padding-left: 12px;
-    border-left: 1px solid #FCF0B9;
+    border-left: 1px solid #ECCFC2;
 }
 
 .menu-item{
 	width: 120px;
 	height: 120px;
-	border: 2px solid #EBA03A;
+	border: 2px solid #C97954;
 	border-radius: 5px;
 	margin: 6px;
 	display: inline-block;
@@ -83,7 +83,7 @@ h2 {
 	position: absolute;
     padding: 17px 13px;
     font-size: 83px;
-    color: rgba(235, 160, 58, 0.20);
+    color: rgba(201,121,84,0.2);
 }
 
 .menu-item:hover {
@@ -114,6 +114,11 @@ h2 {
 .light-red-line{
 	border-bottom: 2px solid #ECCFC2;
 }
+
+.dark-red-line{
+	border-bottom: 1px solid #C97954;
+}
+
 
 #contents{
 	background-color: rgba(256, 256, 256, 0.90);
@@ -149,7 +154,7 @@ h2 {
 }
 
 .parParagraph a{
-	color: #EBA03A;
+	color: #C97954;
 	font-weight: 600;
 }
 
@@ -323,7 +328,7 @@ p.small{
     margin-bottom: 12px;
     height: 130px;
     overflow: hidden;
-    border: 2px solid #EBA03A;
+    border: 2px solid #C97954;
     border-radius: 12px;
     display: inline-block;
     background-color: #fff;
@@ -332,7 +337,7 @@ p.small{
 }
 
 .interest-row:hover{
-	background-color: #EBA03A;
+	background-color: #C97954;
     color: #eee;
     -o-transition:.3s;
 	-ms-transition:.3s;
@@ -402,7 +407,7 @@ p.small{
 	font-size: 18px;
 	margin-top: 32px;
 	padding: 24px 12px;
-	background-color: #ecaf5c;
+	background-color: #C97954;
 	text-shadow: 1px 1px #555;
 	color: #fff;
 	text-align: center;
@@ -410,7 +415,7 @@ p.small{
 }
 
 .further-info:hover{
-	background-color: #eba03a; /** #eba03a */
+	background-color: #d88864;
 }
 
 .bold-text{
@@ -421,7 +426,7 @@ p.small{
 
 /** Country Link in Footer **/
 
-#countryLink{
+/** #countryLink{
 	margin-top: 12px;
 }
 
@@ -440,6 +445,64 @@ p.small{
     margin-right: 6px;
     margin-left: 6px;
     color: #fff;
+}*/
+
+header {
+	border-top: 28px solid #C97954;
+}
+
+#headerIn {
+	margin: 0 auto;
+	width: 960px;
+	position: relative;
+}
+#countryLink {
+	position: absolute;
+	top: -20px;
+	left: 0;
+	line-height: 1;
+}
+#countryLink li {
+	float: left;
+	margin: 0;
+	border-right: 1px solid #fff;
+	padding: 0 10px
+}
+	#countryLink li a {
+		color: #fff;
+		display: block;
+		text-decoration: none;
+		font-size: 13px;
+	}
+		#countryLink li a:hover {
+			color: #51FFFF;
+		}
+#siteMap {
+	position: absolute;
+	top: -20px;
+	right: 0;
+	line-height: 1;
+}
+	#siteMap a {
+		color: #fff;
+		font-size: 13px;
+		display: block;
+		text-decoration: none;
+		background: url(../img/icon_sitemap.png) left top no-repeat;
+		padding: 0 0 0 20px;
+	}
+		#siteMap a:hover {
+			 color: #51FFFF;
+		}
+
+#headLogo {
+	text-align: center;
+	background: url(../img/logo_jp.png) 10px 10px no-repeat;
+	padding: 20px 0 0 0;
+}
+
+.sitemap-ul{
+	font-size: 16px;
 }
 
 
