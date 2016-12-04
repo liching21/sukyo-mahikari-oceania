@@ -505,4 +505,19 @@ header {
 	font-size: 16px;
 }
 
+.holy-sites-h4{
+	font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.opening-hours{
+	border: 1px solid #eee;
+	border-radius: 12px;
+	padding: 6px;
+}
+
+.opening-hours .parParagraph{
+	font-size: 14px;
+	margin-bottom: 6px;
+}
 
