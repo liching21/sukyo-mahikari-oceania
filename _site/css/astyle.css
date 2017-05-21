@@ -45,9 +45,9 @@ h2 {
 	right: initial;
     left: initial;
     bottom: 0px;
-    padding-bottom: 28px;
+    padding-bottom: 6px;
     padding-top: 9px;
-    background-color: #C97954;
+    background-color: rgba(0,0,0,.5);
     width: 100%;
 }
 
@@ -324,10 +324,10 @@ p.small{
 }
 
 .location-grid{
-	height: 300px;
+	height: 84px;
     border: 1px solid #C97954;
     display: inline-block;
-    width: 48.6%;
+    width: 100%;
     margin: 6px;
     padding: 24px;
     border-radius: 10px;
@@ -336,7 +336,13 @@ p.small{
     vertical-align:top;
 }
 
+.location-grid .loc-name{
+	float: left;
+}
 
+.location-grid p{
+	float: right;
+}
 
 /** yourInterest.html */
 
