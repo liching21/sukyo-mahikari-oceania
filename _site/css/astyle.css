@@ -1,4 +1,4 @@
- /**
+/**
  *	File: astyle.css
  * 	Description: added css styles to Peter Lightbody's update on the Sukyo Mahikari Website
  *	Author: Liching Yew
@@ -53,7 +53,22 @@ h2 {
 
 .carousel-indicators{
 	padding-bottom: 0px;
-	bottom: 6px;
+    bottom: -17px;
+    background-color: rgba(0,0,0,0);
+    margin-left: -50%;
+    width: 100%;
+}
+
+.carousel-indicators li{
+	background-color: #666;
+	border: 1px solid #666;
+}
+
+.carousel-indicators .active{
+	width: 10px;
+    height: 10px;
+	background-color: #000;
+	border: 1px solid #000;
 }
 
 .index-content{
