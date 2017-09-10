@@ -498,6 +498,7 @@ p.small{
 
 header {
 	border-top: 28px solid #C97954;
+	min-width: 960px;
 }
 
 #headerIn {
