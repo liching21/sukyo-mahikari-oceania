@@ -7,8 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- <base href="http://www.sukyomahikari.org.au/"> -->
-  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/"> -->
-  <base href="http://127.0.0.1:4000/">
+  <base href="http://lichingyew.com/sukyo-mahikari-oceania/">
+  <!-- <base href="http://127.0.0.1:4000/"> -->
+
+  <!-- Script for redirecting a viewer from sukyomahikari.org.au to www.sukyomahikari.org.au -->
+  <script>
+    var oldPage = window.location.href;
+
+    if (oldPage == "http://sukyomahikari.org.au/") {
+      window.location.replace("http://www.sukyomahikari.org.au/");
+    }
+  </script>
 
   <title>Holy Sites</title>
   <meta name="description" content="Non-denominational spiritual organisation。">

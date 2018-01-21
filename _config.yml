@@ -10,7 +10,7 @@ title: Sukyo Mahikari Australia Oceania
 email: liching.yew@gmail.com
 description: Non-denominational spiritual organisation。
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://lichingyew.com" # the base hostname & protocol for your site
+url: "http://www.sukyomahikari.org.au/" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
