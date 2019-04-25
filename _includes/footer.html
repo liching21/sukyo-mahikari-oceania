@@ -1,0 +1,146 @@
+<footer>
+  <div id="footerIn">
+    <img class="iconGohonzan" src="img/icon_gohonzan.png" width="92" height="70" alt=""/>
+    <img src="img/logo_jp_white.png" width="136" height="52" alt=""/>
+    <div id="address">
+      <address>Sukyo Mahikari Australia Oceania<br>3 Mulley Street<br>Holder ACT 2611<br>Australia</address>
+    </div>
+    <p><small>Copyright &copy; Sukyo Mahikari. All rights reserved.</small></p>
+  </div>
+</footer>
+
+<!-- Script for AJAX -->
+<script>
+	$(document).ready(function() {
+
+		// When a linked is clicked in the content
+		function setLinks() {
+
+			$(".other-content a").click(function() {
+				// get the page that we want
+				console.log($(this).attr("href") == undefined);
+
+				// accordion
+				if($(this).attr("data-ajax-link") == undefined && $(this).attr("href") == undefined){
+					console.log("its undefined");
+					return false;
+				}
+				// other links (with href but no data-ajax-link)
+				else if($(this).attr("data-ajax-link") == undefined){
+					console.log("normal link");
+					window.location.href = $(this).attr("href");
+					return false;
+				}
+
+				var loadPage = $(this).attr("data-ajax-link");
+
+				console.log("loading in other content: " + loadPage);
+
+				// load health page
+				$.ajax({
+				  method: "GET",
+				  url: loadPage,
+				  dataType: "text"
+				})
+				.done(function( data ) {
+
+					$('#contents').fadeOut(function() {
+						$("#contents").html($(data).filter('#contents').html());
+						$('#contents').fadeIn();
+						window.scrollTo(0,0);
+
+						setLinks();
+
+						history.pushState(null,  document.title, loadPage);
+					});
+				});
+
+				return false;
+			});
+
+		}
+
+		//when a navbar menu item is clicked
+		$("#nav-menu a").click(function() {
+
+			// get the page that we want
+			var loadPage = $(this).attr("data-ajax-link");
+
+			console.log("loading in nav menu: " + loadPage);
+
+			// clear active nav link
+			$("#nav-menu .orange").removeClass("orange");
+
+
+			// find this nav link
+			$("#nav-menu a").each(function() {
+				if ($(this).attr("data-ajax-link") == loadPage) {
+					// make this orange
+					$(this).parents("li").addClass("orange");
+				}
+			});
+
+			// load page
+			$.ajax({
+			  method: "GET",
+			  url: loadPage,
+			  dataType: "text"
+			})
+			.done(function( data ) {
+
+				$('#contents').fadeOut(function() {
+					$("#contents").html($(data).filter('#contents').html());
+					$('#contents').fadeIn();
+					window.scrollTo(0,0);
+
+					setLinks();
+
+					history.pushState(null, document.title, loadPage);
+				});
+			});
+
+			return false;
+		});
+
+		setLinks();
+
+		setTimeout(function() {
+			window.addEventListener("popstate", function(e) {
+	    		console.log("location: " + document.location + ", state: ");
+	    		console.log(e);
+
+	    		// load page
+				$.ajax({
+				  method: "GET",
+				  url: document.location,
+				  dataType: "text"
+				})
+				.done(function( data ) {
+
+					$('#contents').fadeOut(function() {
+						$("#contents").html($(data).filter('#contents').html());
+						$('#contents').fadeIn();
+						window.scrollTo(0,0);
+
+						setLinks();
+					});
+				});
+
+	    		console.log("popstate fired!");
+	    	});
+		}, 500);
+
+	});
+</script>
+
+<!-- SCript of Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50652554-5', 'auto');
+  ga('send', 'pageview');
+
+</script>

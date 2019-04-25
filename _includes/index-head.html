@@ -1,0 +1,42 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="http://www.sukyomahikari.org.au/">
+  <!-- <base href="http://lichingyew.com/sukyo-mahikari-oceania/"> -->
+  <!-- <base href="http://127.0.0.1:4000/"> -->
+
+  <!-- Script for redirecting a viewer from sukyomahikari.org.au to www.sukyomahikari.org.au -->
+  <script>
+    var oldPage = window.location.href;
+
+    if (oldPage == "http://sukyomahikari.org.au/") {
+      window.location.replace("http://www.sukyomahikari.org.au/");
+    }
+  </script>
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords" content="Sukyo Mahikari">
+
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://use.fontawesome.com/00614fce7b.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ "css/reset.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "css/master.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "css/astyle.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "css/accordion.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+
+</head>
